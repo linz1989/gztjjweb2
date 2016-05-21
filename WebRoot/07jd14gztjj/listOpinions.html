@@ -1,0 +1,21 @@
+<table id="searchZoneDiv" class="table table-condensed" style="margin-bottom:0px;">
+	<tbody>
+		<tr>
+			<td width="90%" style="border-top-width:0px !important; text-align:left;padding-bottom:2px !important; padding-left:0px !important;">
+			<button id="addArticleButton" type="button" onClick="backArticleListPage();" class="btn btn-primary btn-sm">&nbsp;返回&nbsp;</button>
+			<button id="batchDelArticleButton" type="button" onClick="onClickBatchDelOpinions();" class="btn btn-primary btn-sm">&nbsp;删除&nbsp;</button>
+			<span id="opinionSubjectName" style="margin-left:30px;font-style: italic"></span>
+				<input type="hidden" id="opinionsArticleId"/>
+				<input type="hidden" id="articleCategory" value="070600"/>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<hr style="width:100%; margin-top:5px; margin-bottom:2px;"/>
+
+<!--数据列表-->
+<table id="listOpinionsDataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	<thead><tr>
+	<th>记录ID</th><th><input type="checkbox" id="CheckBoxAll" onclick="onClickCheckAllBox();" style="margin-right:3px; margin-top:5px;"/>全选</th><th>主题</th><th>网名</th><th>Email</th><th>联系电话</th><th>联系地址</th><th>提交时间</th><th>操作</th><th>内容</th>
+	</tr></thead>
+</table>

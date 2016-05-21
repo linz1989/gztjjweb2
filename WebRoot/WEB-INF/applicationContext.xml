@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/gztjjdb"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource"><ref bean="dataSource" /></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+			</props>
+		</property>
+		<property name="mappingResources"> 
+			<list>
+				<value>com/gztjj/model/User.hbm.xml</value>
+				<value>com/gztjj/model/Role.hbm.xml</value>
+				<value>com/gztjj/model/Article.hbm.xml</value>
+				<value>com/gztjj/model/EconomicIndicator.hbm.xml</value>
+				<value>com/gztjj/model/EachEconomicIndicator.hbm.xml</value>
+				<value>com/gztjj/model/DemeanourImage.hbm.xml</value>
+				<value>com/gztjj/model/GanzhouInfo.hbm.xml</value>
+				<value>com/gztjj/model/Subject.hbm.xml</value>
+				<value>com/gztjj/model/NoteBook.hbm.xml</value>
+				<value>com/gztjj/model/ExamScore.hbm.xml</value>
+				<value>com/gztjj/model/DishonestyNotice.hbm.xml</value>
+				<value>com/gztjj/model/Opinions.hbm.xml</value>
+			</list> 
+		</property>
+	</bean>
+	  
+	<bean id="UserDao"  class="com.gztjj.dao.UserDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	<bean id="UserService"  class="com.gztjj.service.UserService">
+		<property name="userDao"><ref bean="UserDao" /></property>
+	</bean>
+	
+	<bean id="RoleDao" class="com.gztjj.dao.RoleDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	<bean id="RoleService"  class="com.gztjj.service.RoleService">
+		<property name="roleDao"><ref bean="RoleDao" /></property>
+	</bean>
+	
+	<bean id="ArticleDao" class="com.gztjj.dao.ArticleDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	<bean id="ArticleService"  class="com.gztjj.service.ArticleService">
+		<property name="articleDao"><ref bean="ArticleDao" /></property>
+	</bean> 
+	
+	<bean id="EconomicIndicatorDao" class="com.gztjj.dao.EconomicIndicatorDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	<bean id="EconomicIndicatorService"  class="com.gztjj.service.EconomicIndicatorService">
+		<property name="economicIndicatorDao"><ref bean="EconomicIndicatorDao" /></property>
+	</bean>
+	 
+	<bean id="EachEconomicIndicatorDao" class="com.gztjj.dao.EachEconomicIndicatorDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	<bean id="EachEconomicIndicatorService"  class="com.gztjj.service.EachEconomicIndicatorService">
+		<property name="eachEconomicIndicatorDao"><ref bean="EachEconomicIndicatorDao" /></property>
+	</bean> 
+	
+	<bean id="DemeanourImageDao" class="com.gztjj.dao.DemeanourImageDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	<bean id="DemeanourImageService"  class="com.gztjj.service.DemeanourImageService">
+		<property name="demeanourImageDao"><ref bean="DemeanourImageDao" /></property>
+	</bean>
+	
+	<bean id="GanzhouInfoDao" class="com.gztjj.dao.GanzhouInfoDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	<bean id="GanzhouInfoService"  class="com.gztjj.service.GanzhouInfoService">
+		<property name="ganzhouInfoDao"><ref bean="GanzhouInfoDao" /></property>
+	</bean>
+	
+	<bean id="SubjectDao" class="com.gztjj.dao.SubjectDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="SubjectService"  class="com.gztjj.service.SubjectService">
+		<property name="subjectDao"><ref bean="SubjectDao" /></property>
+	</bean>
+	
+	<bean id="NoteBookDao" class="com.gztjj.dao.NoteBookDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="NoteBookService"  class="com.gztjj.service.NoteBookService">
+		<property name="noteBookDao"><ref bean="NoteBookDao" /></property>
+	</bean>
+	
+	<bean id="ExamScoreDao" class="com.gztjj.dao.ExamScoreDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="ExamScoreService"  class="com.gztjj.service.ExamScoreService">
+		<property name="examScoreDao"><ref bean="ExamScoreDao" /></property>
+	</bean>
+	
+	<bean id="DishonestyNoticeDao" class="com.gztjj.dao.DishonestyNoticeDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="DishonestyNoticeService"  class="com.gztjj.service.DishonestyNoticeService">
+		<property name="dishonestyNoticeDao"><ref bean="DishonestyNoticeDao" /></property>
+	</bean>
+	
+	<bean id="OpinionsDao" class="com.gztjj.dao.OpinionsDao">
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="OpinionsService"  class="com.gztjj.service.OpinionsService">
+		<property name="opinionsDao"><ref bean="OpinionsDao" /></property>
+	</bean>
+	
+</beans>

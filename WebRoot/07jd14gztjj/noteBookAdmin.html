@@ -1,0 +1,33 @@
+<table id="searchNoteBookDiv" class="table table-condensed" style="margin-bottom:0px;">
+	<tbody>
+		<tr>
+			<td width="80px;" style="border-top-width:0px !important; text-align:left;padding-bottom:2px !important; padding-left:0px !important;">
+			<button id="batchDelNoteBookButton" type="button" onClick="onClickBatchDelNoteBookButton();" class="btn btn-primary btn-sm">&nbsp;删除&nbsp;</button>
+			</td>
+			
+			<td style="border-top-width:0px;padding-bottom:2px !important;width:100%; padding-left:0px !important;">
+			  <select class="form-control" id="noteBookTypeSelect" style="width:130px; font-size:13px; letter-spacing:1px; height:30px;">
+			  	<option value="0">未回复的留言</option>
+			  	<option value="1">已回复的留言</option>
+			  	<option value="2">全部留言</option> 
+			  </select>
+			</td>
+			
+			<td style="width:220px;border-top-width:0px !important;">
+			<input type="text" class="form-control input-sm" id="searchNoteBookTitleKey" placeholder="输入关键词" onkeypress="onKeyPressSearchNoteBookInput(event);" style="width:200px;"/>
+			</td> 
+			
+			<td width="60px;" style="text-align:right;border-top-width:0px !important; padding-right:1px !important; padding-bottom:2px !important"><button type="button" onClick="onClickSearchNoteBookButton();" class="btn btn-primary btn-sm">&nbsp;查询&nbsp;</button></td>
+		</tr>
+	</tbody>
+</table>
+
+<hr style="width:100%; margin-top:0px; margin-bottom:2px;">
+
+<!--数据列表-->
+<table id="noteBookDataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	<thead><tr>
+	<th>ID</th><th><input type="checkbox" id="CheckBoxAllOfNoteBook" onclick="onClickCheckAllBoxOfNoteBook();" style="margin-right:3px; margin-top:5px;"/>全选</th><th>主题</th><th>留言人</th><th>留言时间</th><th>回复时间</th><th>操作</th>
+	<th>咨询人邮箱</th><th>咨询人性别</th><th>咨询内容</th><th>回复</th><th>回复人</th><th>是否已回复</th>
+	</tr></thead>
+</table>

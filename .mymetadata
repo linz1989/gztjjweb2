@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="GztjjWeb"
+  id="myeclipse.1401506193946"
+  context-root="/GztjjWeb"
+  j2ee-spec="6.0"
+  archive="GztjjWeb.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,14 @@
+@import "../common/base.scss";
+@import "../common/list.scss";
+
+div.content{
+  div.listContent{
+    padding-left: 20px;
+    padding-right:20px;
+    margin-bottom:30px;
+    li>a>span.key{
+      color:#ff0000;
+      font-weight: bold;
+    }
+  }
+}

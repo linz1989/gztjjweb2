@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  
+  <listener>   
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+  	<filter-class>com.gztjj.filter.LoginFilter</filter-class>
+  	<init-param>
+      <description>未登录重定向的URL</description>
+      <param-name>redirectUrl</param-name>
+      <param-value>/GztjjWeb/07jd14gztjj/login.html</param-value>
+    </init-param>
+ </filter>
+    
+    <filter-mapping>
+      <filter-name>LoginFilter</filter-name>
+      <url-pattern>/07jd14gztjj/*</url-pattern>
+    </filter-mapping>
+    
+    <servlet> 
+         <servlet-name>log4j-init</servlet-name> 
+         <servlet-class>com.gztjj.servlet.Log4jInit</servlet-class> 
+         <init-param> 
+           <param-name>log4j</param-name> 
+           <param-value>WEB-INF/classes/log4j.properties</param-value> 
+         </init-param>
+         <load-on-startup>1</load-on-startup> 
+       </servlet>
+  
+  <!-- 登陆的处理 -->
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.gztjj.servlet.LoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 用户的管理 -->
+  <servlet>
+    <servlet-name>userAdminServlet</servlet-name>
+    <servlet-class>com.gztjj.servlet.UserAdminServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>userAdminServlet</servlet-name>
+    <url-pattern>/userAdminServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 角色的管理 -->
+  <servlet>
+    <servlet-name>roleAdminServlet</servlet-name>
+    <servlet-class>com.gztjj.servlet.RoleAdminServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>roleAdminServlet</servlet-name>
+    <url-pattern>/roleAdminServlet</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 文章的管理 -->
+  <servlet>
+    <servlet-name>articleServlet</servlet-name>
+    <servlet-class>com.gztjj.servlet.ArticleServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>articleServlet</servlet-name>
+    <url-pattern>/articleServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 经济指标的管理 -->
+  <servlet>
+    <servlet-name>economicIndicatorServlet</servlet-name>
+    <servlet-class>com.gztjj.servlet.EconomicIndicatorAdminServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>economicIndicatorServlet</servlet-name>
+    <url-pattern>/economicIndicatorServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 各县经济指标的管理 -->
+  <servlet>
+    <servlet-name>economicIndicatorServlet2</servlet-name>
+    <servlet-class>com.gztjj.servlet.EachEconomicIndicatorAdminServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>economicIndicatorServlet2</servlet-name>
+    <url-pattern>/economicIndicatorServlet2</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 图片的管理 -->
+  <servlet>
+    <servlet-name>imageServlet</servlet-name>
+    <servlet-class>com.gztjj.servlet.DemeanourImageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>imageServlet</servlet-name>
+    <url-pattern>/imageServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Flex文件上传 -->
+  <servlet>
+    <servlet-name>flexFileUploadServlet</servlet-name>
+    <servlet-class>com.gztjj.servlet.FlexFileUploadServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>flexFileUploadServlet</servlet-name>
+    <url-pattern>/flexFileUploadServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 赣州地图 信息 -->
+  <servlet>
+    <servlet-name>ganzhouInfoServlet</servlet-name>
+    <servlet-class>com.gztjj.servlet.GanzhouInfoServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping> 
+    <servlet-name>ganzhouInfoServlet</servlet-name>
+    <url-pattern>/ganzhouInfoServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 专题 -->
+  <servlet> 
+    <servlet-name>subjectServlet</servlet-name>
+    <servlet-class>com.gztjj.servlet.SubjectServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping> 
+    <servlet-name>subjectServlet</servlet-name>
+    <url-pattern>/subjectServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 成绩查询 -->
+  <servlet> 
+    <servlet-name>examScoreServlet</servlet-name>
+    <servlet-class>com.gztjj.servlet.ExamScoreServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping> 
+    <servlet-name>examScoreServlet</servlet-name>
+    <url-pattern>/examScoreServlet</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+		<servlet-name>noteBookServlet</servlet-name>
+		<servlet-class>com.gztjj.servlet.NoteBookServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>noteBookServlet</servlet-name>
+		<url-pattern>/noteBookServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>dishonestyNoticeServlet</servlet-name>
+		<servlet-class>com.gztjj.servlet.DishonestyNoticeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>dishonestyNoticeServlet</servlet-name>
+		<url-pattern>/dishonestyNoticeServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>opinionsServlet</servlet-name>
+		<servlet-class>com.gztjj.servlet.OpinionsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>opinionsServlet</servlet-name>
+		<url-pattern>/opinionsServlet</url-pattern>
+	</servlet-mapping>
+  
+  <display-name>赣州市统计局网站</display-name>
+  
+  <welcome-file-list> 
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list> 
+  
+  <error-page> 
+  	<error-code>500</error-code>
+  	<location>/error.html</location>
+  </error-page>
+  
+</web-app>

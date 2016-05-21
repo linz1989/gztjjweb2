@@ -1,0 +1,1449 @@
+@import "../common/base.scss";
+@import "../common/common.scss";
+@import "../common/idangerous.swiper.scss";
+
+div.content{
+  &>div.row{
+    margin-top:15px;
+    &.split{
+      border-top:2px solid #0099ff;
+      padding-top:10px;
+    }
+  }
+
+  div.panel{
+    //@include boxShadow(0 1px 1px rgba(0,0,0,0.05));
+    @include transition(all 0.3s);
+    &:hover{
+      //@include boxShadow(0 15px 30px rgba(0,0,0,0.1));
+    }
+    &>div.panelHeader{
+      height:48px;
+      padding-left:38px;
+      border-bottom:1px solid #ccc;
+      line-height: 48px;
+      position: relative;
+      font-size:18px;
+      color:#254282;
+      &>a{
+        color:#254282;
+      }
+      &>i{
+        display: block;
+        position: absolute;
+        width:22px;
+        height:22px;
+        left:8px;
+        top:50%;
+        margin-top:-11px;
+      }
+    }
+
+    &>div.panelContent{
+      padding:6px 6px 6px;
+    }
+  }
+
+  div.tabPanel{
+    &>div.header{
+      width:100%;
+      height:36px;
+      background-color: #f5f5f5;
+      border-bottom: 1px solid #428bca;
+      position: relative;
+      &>div{
+        position: absolute;
+        height:36px;
+        left:0;
+        background-color: #428bca;
+        @include transition(left 0.4s);
+      }
+      &>ul{
+        display: block;
+        position: absolute;
+        width:100%;
+        height:36px;
+        left:0;
+        top:0;
+        &>li{
+          float: left;
+          height:36px;
+          line-height: 36px;
+          text-align: center;
+          &>a{
+            color:#4d4d4d;
+            @include transition(color 0.3s);
+          }
+          &.active{
+            &>a{
+              color:#fff;
+            }
+          }
+        }
+      }
+    }
+
+    &>ul.tab{
+      display: none;
+      width:100%;
+      &.active{
+        display: block;
+      }
+      &>li{
+        position: relative;
+        width:100%;
+        height:32px;
+        line-height: 32px;
+        font-size:15px;
+        border-bottom:1px dotted #9d9d9d;
+        text-align: right;
+        margin-bottom:4px;
+        &:first-child{
+          padding-top:5px;
+        }
+        &>a{
+          display: block;
+          position: absolute;
+          height:33px;
+          left:0;
+          right:130px;
+          @include sl();
+          color:#4d4d4d;
+          text-align: left;
+          &:hover{
+            color:#428bca
+          }
+        }
+      }
+    }
+  }
+
+  &>div.notice{
+    height:90px;
+    margin-top:15px;
+    padding:3px 0;
+    background: url("../../../img/public/index/notice.jpg");
+    @include boxShadow(0 1px 1px rgba(0,0,0,.05));
+    &.bgSize{
+      background-size: 100% 100%;
+    }
+    &>div.left{
+      width:450px;
+      float: left;
+      height:100%;
+      line-height: 80px;
+      text-align: center;
+      font-size:32px;
+      color:#254282;
+      font-weight: bold;
+    }
+    &>div.right{
+      width:510px;
+      height:100%;
+      float: right;
+      font-size:15px;
+      &>div{
+        height:38px;
+        &>a{
+          display: block;
+          position: relative;
+          line-height: 38px;
+          float: left;
+          color:#428bca;
+          text-indent: 22px;
+          width:55%;
+          &:first-child{
+            width:45%;
+          }
+          &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+          }
+          &>i{
+            position: absolute;
+            display: block;
+            width:16px;
+            height:16px;
+            left:0;
+            top:50%;
+            margin-top:-8px;
+          }
+        }
+        &>a>i{
+          background: url("../../../img/public/index/radio.png?base64");
+        }
+
+        &.top{
+          margin-top:5px;
+          border-bottom: 1px dotted #fff;
+          &>a.tel>i{
+            background: url("../../../img/public/index/tel.png?base64");
+          }
+        }
+
+        &.bottom{
+          &>a.email>i{
+            background: url("../../../img/public/index/email.png?base64");
+          }
+        }
+
+      }
+    }
+  }
+}
+
+div#headline{
+  height:60px;
+  margin-left:60px;
+  position: relative;
+  line-height: 60px;
+  text-align: center;
+  border-bottom: 1px solid #9d9d9d;
+  &>div{
+    position: absolute;
+    width:60px;
+    height:56px;
+    left:-60px;
+    top:0;
+    background-color: #be2e0a;
+    color:#fff;
+    text-align: center;
+    padding-top:5px;
+    font-size:22px;
+    line-height: 25px;
+  }
+  &>a{
+    display: block;
+    color:#4d4d4d;
+    font-size:30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding:0 10px;
+    @include sl();
+  }
+}
+
+div#imgSlide,div#workTab{
+  width:450px;
+  height:293px;
+  float: left;
+}
+
+div#workTab{
+  width:510px;
+  margin-left:10px;
+  overflow: hidden;
+  &>div.header{
+    &>div,&>ul>li{  width:33.33%;  }
+  }
+
+  &>ul.tab{
+    &>li{
+      &:first-child{
+        padding-top:1px;
+      }
+      &>a{  left:16px;  }
+      &>i{
+        position: absolute;
+        display: block;
+        width:8px;
+        height:8px;
+        left:0;
+        top:13px;
+        background-color: #666;
+      }
+    }
+  }
+}
+
+div#imgSlide{
+  position: relative;
+  overflow: hidden;
+  div.swiper-slide{
+    width:450px;
+    height:293px;
+    overflow: hidden;
+    float:left;
+    &>a{
+      display: block;
+      width: 100%;
+      height:100%;
+      &>img{
+        width:100%;
+        height:100%;
+      }
+    }
+  }
+  &>div.switcher{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    z-index: 99;
+    height:28px;
+    text-align: right;
+    padding-top:4px;
+    background-color: rgba(0,0,0,0.45);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
+    &>a{
+      color:#efefef;
+      font-size:12px;
+      padding:2px 5px;
+      margin-right:4px;
+      cursor: pointer;
+      background-color: rgba(0,0,0,0.65);
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+      &:hover,&.cur{
+        background-color: #be2e0a;
+      }
+    }
+  }
+  &>div.imgTip{
+    position: absolute;
+    height:32px;
+    left:0;
+    right:173px;
+    bottom:0;
+    padding-left:8px;
+    line-height: 28px;
+    font-size:14px;
+    color:#fff;
+    z-index: 101;
+    @include sl();
+  }
+}
+
+div#onlineService,div#statisticsData{
+  height:320px;
+  width:197px;
+  float: left;
+}
+
+div#onlineService{
+  &>div.panelHeader>i{
+    background: url("../../../img/public/index/online.png?base64");
+  }
+  &>div.panelContent{
+    height:259px;
+    &>a{
+      position: relative;
+      font-size: 15px;
+      display: block;
+      margin-top:10px;
+      height:53px;
+      line-height: 53px;
+      border:1px solid #ececec;
+      border-radius: 4px;
+      padding-left:49px;
+      color:#4d4d4d;
+      @include transition(background-color 0.3s);
+      &>i{
+        display: block;
+        width:32px;
+        height:32px;
+        position: absolute;
+        left:9px;
+        top:50%;
+        margin-top:-16px;
+      }
+      &:hover{
+        background-color: #428bca;
+        color:#fff;
+        cursor: pointer;
+      }
+    }
+    &>a.exam{
+      margin-top:6px;
+      &>i{
+        background: url("../../../img/public/index/exam.png?base64");
+      }
+      &:hover{
+        &>i{
+          background: url("../../../img/public/index/exam_active.png?base64");
+        }
+      }
+    }
+    &>a.auth{
+      &>i{
+        background: url("../../../img/public/index/auth.png?base64");
+      }
+      &:hover{
+        &>i{
+          background: url("../../../img/public/index/auth_active.png?base64");
+        }
+      }
+    }
+    &>a.internet{
+      &>i{
+        background: url("../../../img/public/index/internet.png?base64");
+      }
+      &:hover{
+        &>i{
+          background: url("../../../img/public/index/internet_active.png?base64");
+        }
+      }
+    }
+    &>a.pm{
+      &>i{
+        background: url("../../../img/public/index/pm.png?base64");
+      }
+      &:hover{
+        &>i{
+          background: url("../../../img/public/index/pm_active.png?base64");
+        }
+      }
+    }
+  }
+}
+
+div#statisticsData{
+  width:759px;
+  margin-left:10px;
+  &>div.panelHeader>i{
+    background: url("../../../img/public/index/statistics.png?base64");
+  }
+  &>div.panelContent{
+    height:259px;
+    &>div.indicator{
+      width:40%;
+      float: left;
+      //border:1px solid #ff0000;
+      &>div.header{
+        height:36px;
+        position: relative;
+        background-color: #f5f5f5;
+        font-size:15px;
+        margin-top:7px;
+        @include boxSizing();
+        &>div{
+          position: absolute;
+          left:0;
+          top:0;
+          width:50%;
+          height:36px;
+          background-color: #428bca;
+          @include transition(left 0.4s);
+        }
+        &>ul{
+          position: absolute;
+          left:0;
+          width:100%;
+          top:0;
+          &>li{
+            width:50%;
+            line-height: 36px;
+            text-align: center;
+            float: left;
+            &>a{
+              color:#4d4d4d;
+              @include transition(color 0.3s);
+            }
+            &.active{
+              &>a{
+                color:#fff;
+              }
+            }
+          }
+        }
+      }
+
+      &>div.date{
+        &>div{
+          &>div{
+            width:20%;
+            float: left;
+            height:52px;
+            line-height: 52px;
+            text-align: center;
+            @include boxSizing();
+            border-left:1px solid #ececec;
+            border-top:1px solid #ececec;
+            border-right:1px solid #ececec;
+            &.b{
+              height:53px;
+              line-height: 53px;
+              border-bottom:1px solid #ececec;
+            }
+          }
+          &>ul{
+            width:80%;
+            float: left;
+            height:52px;
+            &>li{
+              font-size:14px;
+              line-height: 25px;
+              width:16.666%;
+              float: left;
+              border-top:1px solid #ececec;
+              border-right:1px solid #ececec;
+              text-align: center;
+              @include boxSizing();
+              @include transition(all 0.3s);
+              &.b{
+                border-bottom:1px solid #ececec;
+              }
+              &:hover{
+                background-color: #428bca;
+                color:#fff;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+    }
+    &>div.chart{
+      width:60%;
+      height:252px;
+      float: left;
+      font-size:12px;
+    }
+  }
+}
+
+div#subjectWrap{
+  height:100px;
+  position: relative;
+  padding:10px 0 10px 40px;
+  border:1px solid #d9d9d9;
+  @include boxShadow(0 1px 1px rgba(0,0,0,.05));
+  @include transition(all 0.3s);
+  overflow: hidden;
+  &:hover{
+    @include boxShadow(0 15px 30px rgba(0,0,0,0.1));
+    //@include t3d(0, -2px, 0);
+  }
+  &>div.subjectTitle{
+    position: absolute;
+    top:-1px;
+    left:-1px;
+    width:22px;
+    height:86px;
+    background-color: #254282;
+    text-align: center;
+    color:#fff;
+    padding:18px 10px;
+  }
+  &>div.subjectList{
+    height:100%;
+    div.swiper-slide{
+      width:208px;
+      text-align: center;
+      height:100px;
+      line-height: 100px;
+      @include boxSizing();
+      margin-right:15px;
+      &>a{
+        display: block;
+        width:100%;
+        height:100%;
+        &>img{
+          width:100%;
+          height:100%;
+        }
+      }
+    }
+  }
+}
+
+div#statisticsAnalysis{
+  width:100%;
+  height:332px;
+  &>div.panelHeader>i{
+    background: url("../../../img/public/index/analysis.png?base64")
+  }
+  &>div.panelContent{
+    height:268px;
+    padding:6px 10px 10px 10px;
+  }
+}
+
+div#statisticsAnalysisTab-1{
+  margin-right:30px;
+}
+
+div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2{
+  width:460px;
+  margin-top:6px;
+  float: left;
+  &>div.header{
+    &>div,&>ul>li{  width:33.3%;  }
+  }
+}
+
+div#economicNews,div#yearBulletin{
+  width:478px;
+  height:332px;
+  float: left;
+  &>div.panelContent{
+    height:267px;
+    padding:6px 10px 10px 10px;
+    &>div.tabPanel{
+      margin-top:6px;
+    }
+  }
+}
+
+div#economicNews{
+  margin-right:10px;
+  &>div.panelHeader>i{
+    background: url("../../../img/public/index/economic.png?base64")
+  }
+
+  div#economicNewsTab{
+    &>div.header{
+      &>div,&>ul>li{  width:33.33%;  }
+    }
+  }
+}
+
+div#yearBulletin{
+  &>div.panelHeader>i{
+    background: url("../../../img/public/index/bulletin.png?base64")
+  }
+
+  div#yearBulletinTab{
+    &>div.header{
+      &>div,&>ul>li{  width:50%;  }
+    }
+  }
+}
+
+div#statisticsConsult,div#ganzhuMap{
+  width:478px;
+  height:428px;
+  float: left;
+  &>div.panelContent{
+    padding:6px 10px 10px 10px;
+    &>div{
+      height:100%;
+      text-align: center;
+    }
+  }
+}
+
+div#statisticsConsult{
+  margin-right:10px;
+  &>div.panelHeader>i{
+    background: url("../../../img/public/index/consult.png?base64")
+  }
+  &>div.panelContent{
+    height:374px;
+    &>ul{
+      width:100%;
+      &>li{
+        position: relative;
+        width:100%;
+        height:32px;
+        line-height: 32px;
+        font-size:15px;
+        border-bottom:1px dotted #9d9d9d;
+        text-align: right;
+        margin-bottom:4px;
+        &:first-child{
+          padding-top:1px;
+        }
+        &>a{
+          display: block;
+          position: absolute;
+          height:35px;
+          left:16px;
+          right:130px;
+          @include sl();
+          color:#4d4d4d;
+          text-align: left;
+          &:hover{
+            color:#428bca
+          }
+        }
+        &>i{
+          position: absolute;
+          display: block;
+          width:8px;
+          height:8px;
+          left:0;
+          top:13px;
+          background-color:#666;
+        }
+      }
+    }
+  }
+}
+
+div#ganzhuMap{
+  position: relative;
+  &>div.panelHeader>i{
+    background: url("../../../img/public/index/map.png?base64")
+  }
+  &>div.panelContent{
+    height:360px;
+  }
+  &>div.info{
+    position: absolute;
+    display: none;
+    width:90px;
+    height:45px;
+    left:10px;
+    top:60px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    line-height:45px;
+    text-align: center;
+    color:#fff;
+    letter-spacing: 2px;
+  }
+}
+
+div#statisticsFeature{
+  height:230px;
+  overflow: hidden;
+  &>div.panelHeader>i{
+    background: url("../../../img/public/index/feature.png?base64")
+  }
+  &>div.panelContent{
+    height:160px;
+    padding-top:10px;
+    div.swiper-slide{
+      width:230px;
+      height:160px;
+      text-align: center;
+      margin-right:15px;
+      &>a{
+        display: block;
+        height:100%;
+        text-align: center;
+        line-height:30px;
+        @include sl();
+        color:#4d4d4d;
+        font-size:15px;
+        &>img{
+          width:230px;
+          height:130px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////高德地图
+.amap-copyright{
+  display: none !important;
+}
+.amap-logo{
+  display: none !important;
+}
+
+//////////////////////////////////////////////media query
+@media screen and (max-width:1000px){
+  div#headline>a{
+    font-size:26px;
+    letter-spacing: 0;
+    font-weight: normal;
+  }
+  div#imgSlide{
+    width:710px;
+    height:440px;
+    &>div.swiper-wrapper>div.swiper-slide{
+      height:440px;
+      width:710px;
+    }
+  }
+
+  div#workTab{
+    margin-top:15px;
+    margin-left:0;
+    width:710px;
+  }
+
+  div.content>div.notice{
+    height:160px;
+    &>div.left{
+      width:350px;
+      height:50%;
+    }
+    &>div.right{
+      height:50%;
+    }
+  }
+
+  div#onlineService{
+    width:710px;
+    height:130px;
+    &>div.panelContent{
+      height:80px;
+      &>a{
+        float: left;
+        padding-right:5px;
+        margin-right:8px;
+        &.exam{
+          margin-top:10px;
+        }
+        &.pm{
+          margin-right:0;
+        }
+      }
+    }
+  }
+
+  div#statisticsData{
+    margin-left:0;
+    width:710px;
+  }
+
+  div#statisticsAnalysis,div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    &>div.panelContent{
+      padding-left:0;
+      padding-right:0;
+    }
+  }
+  div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2,div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    width:710px;
+    margin-right:0;
+  }
+}
+
+@media screen and (max-width:749px){
+  div#headline>a{
+    font-size:24px;
+  }
+  div#imgSlide{
+    width:610px;
+    height:400px;
+    &>div.swiper-wrapper>div.swiper-slide{
+      height:400px;
+      width:610px;
+    }
+  }
+
+  div#workTab{
+    margin-top:15px;
+    margin-left:0;
+    width:610px;
+  }
+
+  div.content>div.notice{
+    height:160px;
+    &>div.left{
+      width:350px;
+      height:50%;
+      font-size:25px;
+    }
+    &>div.right{
+      height:50%;
+    }
+  }
+
+  div#onlineService{
+    width:610px;
+    height:190px;
+    &>div.panelContent{
+      height:140px;
+      &>a{
+        float: left;
+        padding-right:0;
+        margin-right:0;
+        width:220px;
+        &.exam{
+          margin-top:10px;
+          margin-right:20px;
+          margin-left:15px;
+        }
+        &.internet{
+          margin-right:20px;
+          margin-left:15px;
+        }
+      }
+    }
+  }
+
+  div#statisticsData{
+    margin-left:0;
+    width:610px;
+    height:570px;
+    &>div.panelContent{
+      &>div.indicator{
+        width:100%;
+      }
+      &>div.chart{
+        margin-top:10px;
+        width:100%;
+      }
+    }
+  }
+
+  div#statisticsAnalysis,div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    &>div.panelContent{
+      padding-left:0;
+      padding-right:0;
+    }
+  }
+  div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2,div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    width:610px;
+    margin-right:0;
+  }
+}
+
+////////////////////////////////480
+@media screen and (max-width:649px) {
+  div#headline>a{
+    font-size:20px;
+  }
+  div#imgSlide{
+    width:430px;
+    height:280px;
+    &>div.swiper-wrapper>div.swiper-slide{
+      height:280px;
+      width:430px;
+    }
+  }
+
+  div#workTab{
+    margin-top:15px;
+    margin-left:0;
+    width:430px;
+  }
+
+  div.content>div.notice{
+    height:160px;
+    &>div.left{
+      width:350px;
+      height:50%;
+    }
+    &>div.right{
+      width:410px;
+      height:50%;
+      &>div{
+        &>a{
+          width:65%;
+          &:first-child{
+            width:32%;
+          }
+        }
+      }
+    }
+  }
+
+  div#onlineService{
+    width:430px;
+    height:190px;
+    &>div.panelContent{
+      height:140px;
+      &>a{
+        float: left;
+        padding-right:0;
+        margin-right:0;
+        width:140px;
+        &.exam{
+          margin-top:10px;
+          margin-right:20px;
+          margin-left:10px;
+        }
+        &.internet{
+          margin-right:20px;
+          margin-left:10px;
+        }
+      }
+    }
+  }
+
+  div#statisticsData{
+    margin-left:0;
+    width:430px;
+    height:570px;
+    &>div.panelContent{
+      &>div.indicator{
+        width:100%;
+      }
+      &>div.chart{
+        margin-top:10px;
+        width:100%;
+      }
+    }
+  }
+
+  div#statisticsAnalysis,div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    &>div.panelContent{
+      padding-left:0;
+      padding-right:0;
+    }
+  }
+  div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2,div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    width:430px;
+    margin-right:0;
+  }
+}
+
+////////////////////////////////414
+@media screen and (max-width:479px) {
+  div#imgSlide{
+    width:384px;
+    height:260px;
+    &>div.swiper-wrapper>div.swiper-slide{
+      height:260px;
+      width:384px;
+    }
+  }
+
+  div#workTab{
+    margin-top:15px;
+    margin-left:0;
+    width:384px;
+  }
+
+  div.content>div.notice{
+    height:160px;
+    &>div.left{
+      width:250px;
+      height:50%;
+    }
+    &>div.right{
+      width:380px;
+      height:50%;
+      &>div{
+        &>a{
+          width:69%;
+          &:first-child{
+            width:30%;
+          }
+        }
+      }
+    }
+  }
+
+  div#onlineService{
+    width:384px;
+    height:190px;
+    &>div.panelContent{
+      height:140px;
+      &>a{
+        float: left;
+        padding-right:7px;
+        margin-right:0;
+        width:120px;
+        &.exam{
+          margin-top:10px;
+          margin-right:10px;
+          margin-left:5px;
+        }
+        &.internet{
+          margin-right:10px;
+          margin-left:5px;
+        }
+      }
+    }
+  }
+
+  div#statisticsData{
+    margin-left:0;
+    width:384px;
+    height:570px;
+    &>div.panelContent{
+      &>div.indicator{
+        width:100%;
+      }
+      &>div.chart{
+        margin-top:10px;
+        width:100%;
+      }
+    }
+  }
+
+  div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2,div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    width:384px;
+    margin-right:0;
+  }
+}
+
+///////////////////375
+@media screen and (max-width:413px) {
+  div#imgSlide{
+    width:345px;
+    height:240px;
+    &>div.swiper-wrapper>div.swiper-slide{
+      height:240px;
+      width:345px;
+    }
+  }
+
+  div#workTab{
+    margin-top:15px;
+    margin-left:0;
+    width:345px;
+    &>ul.tab>li{
+      &>a{
+        left:0;
+      }
+      &>i{
+        display: none;
+      }
+    }
+  }
+
+  div.content>div.notice{
+    height:160px;
+    &>div.left{
+      width:250px;
+      height:50%;
+      font-size:22px;
+    }
+    &>div.right{
+      width:330px;
+      height:50%;
+      &>div{
+        &>a{
+          width:90%;
+          &:first-child{
+            display: none;
+            width:30%;
+          }
+        }
+      }
+    }
+  }
+
+  div#onlineService{
+    width:345px;
+    height:190px;
+    &>div.panelContent{
+      padding-left:0;
+      padding-right:0;
+      height:140px;
+      &>a{
+        float: left;
+        font-size: 14px;
+        padding-right:2px;
+        margin-right:0;
+        width:115px;
+        &.exam{
+          margin-top:10px;
+          margin-right:5px;
+          margin-left:1px;
+        }
+        &.internet{
+          margin-right:5px;
+          margin-left:1px;
+        }
+      }
+    }
+  }
+
+  div#statisticsData{
+    margin-left:0;
+    width:345px;
+    height:570px;
+    &>div.panelContent{
+      &>div.indicator{
+        width:100%;
+      }
+      &>div.chart{
+        margin-top:10px;
+        width:100%;
+      }
+    }
+  }
+
+  div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2,div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    width:345px;
+    margin-right:0;
+  }
+
+  div#statisticsConsult>div.panelContent>ul>li{
+    &>i{
+      display: none;
+    }
+    &>a{
+      left:0;
+    }
+  }
+}
+
+///////////360
+@media screen and (max-width:374px) {
+  div#imgSlide{
+    width:330px;
+    height:220px;
+    &>div.swiper-wrapper>div.swiper-slide{
+      height:220px;
+      width:330px;
+    }
+  }
+
+  div#workTab{
+    margin-top:15px;
+    margin-left:0;
+    width:330px;
+  }
+
+  div.content>div.notice{
+    height:160px;
+    &>div.left{
+      width:250px;
+      height:50%;
+      font-size:22px;
+    }
+    &>div.right{
+      width:300px;
+      height:50%;
+      &>div{
+        &>a{
+          width:90%;
+          &:first-child{
+            display: none;
+            width:30%;
+          }
+        }
+      }
+    }
+  }
+
+  div#onlineService{
+    width:330px;
+    height:190px;
+    &>div.panelContent{
+      padding-left:0;
+      padding-right:0;
+      height:140px;
+      &>a{
+        float: left;
+        font-size: 13px;
+        padding-right:2px;
+        margin-right:0;
+        width:108px;
+        &.exam{
+          margin-top:10px;
+          margin-right:5px;
+          margin-left:1px;
+        }
+        &.internet{
+          margin-right:5px;
+          margin-left:1px;
+        }
+      }
+    }
+  }
+
+  div#statisticsData{
+    margin-left:0;
+    width:330px;
+    height:570px;
+    &>div.panelContent{
+      &>div.indicator{
+        width:100%;
+      }
+      &>div.chart{
+        margin-top:10px;
+        width:100%;
+      }
+    }
+  }
+
+  div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2,div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    width:330px;
+    margin-right:0;
+  }
+}
+
+///////////320
+@media screen and (max-width:359px) {
+  div#imgSlide{
+    width:290px;
+    height:200px;
+    &>div.swiper-wrapper>div.swiper-slide{
+      height:200px;
+      width:290px;
+    }
+  }
+
+  div#workTab{
+    margin-top:15px;
+    margin-left:0;
+    width:290px;
+  }
+
+  div.content>div.notice{
+    height:160px;
+    &>div.left{
+      width:250px;
+      height:50%;
+      font-size:22px;
+    }
+    &>div.right{
+      width:280px;
+      height:50%;
+      &>div{
+        &>a{
+          width:100%;
+          &:first-child{
+            display: none;
+            width:30%;
+          }
+        }
+      }
+    }
+  }
+
+  div#onlineService{
+    width:290px;
+    height:190px;
+    &>div.panelContent{
+      padding-left:0;
+      padding-right:0;
+      height:140px;
+      &>a{
+        float: left;
+        font-size: 12px;
+        padding-right:0;
+        margin-right:0;
+        width:98px;
+        padding-left:40px;
+        &>i{
+          left:4px;
+        }
+        &.exam{
+          margin-top:10px;
+          margin-right:5px;
+          margin-left:1px;
+        }
+        &.internet{
+          margin-right:5px;
+          margin-left:1px;
+        }
+      }
+    }
+  }
+
+  div#statisticsData{
+    margin-left:0;
+    width:290px;
+    height:570px;
+    &>div.panelContent{
+      &>div.indicator{
+        width:100%;
+        &>div.header>ul>li>a{
+          font-size:14px;
+        }
+        &>div.date>div>ul>li{
+          font-size:12px;
+        }
+      }
+      &>div.chart{
+        margin-top:10px;
+        width:100%;
+      }
+    }
+  }
+
+  div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2,div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    width:290px;
+    margin-right:0;
+  }
+
+  div#statisticsConsult>div.panelContent>ul>li>a{
+    font-size:12px;
+  }
+}
+
+@media screen and (min-width:1280px){
+  div#headline>a{
+    font-size:33px;
+    letter-spacing: 3px;
+  }
+
+  div.content{
+    &>div.notice{
+      &>div.right{
+        width:690px;
+      }
+    }
+  }
+
+  div#workTab{
+    width:690px;
+  }
+
+  div#statisticsData{
+    width:943px;
+  }
+
+  div#statisticsAnalysis{
+    width:100%;
+  }
+  div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2{
+    width:550px;
+  }
+
+  div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    width:570px;
+  }
+}
+
+@media screen and (min-width:1366px){
+  div#imgSlide,div#workTab{
+    height:330px;
+  }
+  div#imgSlide{
+    width:530px;
+    &>div.swiper-wrapper>div.swiper-slide{
+      height:330px;
+      width:530px;
+    }
+  }
+
+  div#statisticsData{
+    width:1023px;
+  }
+
+  div#statisticsAnalysis{
+    width:1230px;
+    div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2{
+      width:590px;
+    }
+  }
+
+  div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    width:610px;
+  }
+}
+
+@media screen and (min-width:1440px){
+  div#imgSlide{
+    width:560px;
+    &>div.swiper-wrapper>div.swiper-slide{
+      width:560px;
+    }
+  }
+
+  div#workTab{
+    width:740px;
+  }
+
+  div#statisticsData{
+    width:1053px;
+  }
+
+  div#onlineService{
+    width:247px;
+    &>div.panelContent{
+      &>a{
+        padding-left: 75px;
+        &>i{
+          left:30px;
+        }
+      }
+    }
+  }
+
+  div#statisticsAnalysis{
+    width:1310px;
+    div#statisticsAnalysisTab-1,div#statisticsAnalysisTab-2{
+      width:630px;
+    }
+  }
+
+  div#economicNews,div#yearBulletin,div#statisticsConsult,div#ganzhuMap{
+    width:650px;
+  }
+}

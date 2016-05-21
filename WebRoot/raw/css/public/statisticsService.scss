@@ -1,0 +1,173 @@
+@import "../common/base.scss";
+@import "../common/list.scss";
+
+div.content{
+  div.currPos{
+    a#consultBtn{
+      display: none;
+      float: right;
+      line-height: 35px;
+      margin-top:5px;
+      padding:0 15px;
+      font-size:14px;
+      border:1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover{
+        background-color: #f0f0f0;
+        text-decoration: none;
+        color:#428bca;
+      }
+    }
+  }
+  div.listContent{
+    padding-left:250px;
+    &>div.leftMenu{
+      width:230px;
+      &>ul.navMenu{
+        &>li{
+          &.exam,&.item{
+            display: none;
+          }
+          &.item-layer{
+            border-bottom-width:0;
+            &.active{
+              border-bottom-width:1px;
+            }
+          }
+        }
+      }
+    }
+    &>div.articleContent{
+      min-height: 700px;
+    }
+  }
+}
+
+div.consultWrap{
+  display: none;
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index: 999;
+  opacity: 0;
+  @include transition(opacity 0.15s linear);
+  background-color: rgba(0,0,0,0.5);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+  &.active{
+    opacity: 1;
+  }
+  &>div{
+    width:500px;
+    height:480px;
+    margin:30px auto;
+    background-color: #fff;
+    @include boxShadow(0 5px 15px rgba(0,0,0,0.5));
+    border-radius: 4px;
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -moz-transition: -moz-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    @include tY(-25%);
+    &.active{
+      @include tY(0);
+    }
+    &>h3{
+      position: relative;
+      height:55px;
+      line-height: 55px;
+      color:#fff;
+      text-align: center;
+      font-size:18px;
+      background-color: #428bca;
+      margin-bottom:15px;
+    }
+    &>div{
+      height:45px;
+      line-height: 45px;
+      &>span{
+        display: inline-block;
+        text-align: right;
+        width:105px;
+        margin-right:10px;
+      }
+      &>input,textarea{
+        display: inline-block;
+        height: 30px;
+        width:320px;
+        padding: 0 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+        color: #555;
+        vertical-align: middle;
+        border: 1px solid #ccc;
+        @include boxShadow(inset 0 1px 1px rgba(0,0,0,0.075));
+        -webkit-transition : border-color ease-in-out .15s ,box-shadow ease-in-out .15s;
+        -moz-transition : border-color ease-in-out .15s ,box-shadow ease-in-out .15s;
+        -ms-transition : border-color ease-in-out .15s ,box-shadow ease-in-out .15s;
+        transition : border-color ease-in-out .15s ,box-shadow ease-in-out .15s;
+        &:focus{
+          border:#87C6F9 1px solid;
+          box-shadow: 0 0 5px rgba(103, 166, 217, 1);
+        }
+      }
+      &>textarea{
+        margin-top:10px;
+        padding-top:10px;
+        padding-bottom:10px;
+        height:120px;
+      }
+      &>b{
+        font-weight: normal;
+        margin-right:25px;
+        font-size:14px;
+      }
+      &>i{
+        display: inline-block;
+        width:16px;
+        height:16px;
+        margin-right:5px;
+        background: url("../../../img/public/common/radio.png?base64");
+        &.active{
+          background: url("../../../img/public/common/radio_check.png?base64");
+        }
+      }
+      &.content{
+        height:170px;
+      }
+    }
+    &>h4{
+      height:55px;
+      line-height: 55px;
+      text-align: center;
+      border-top:1px solid #ddd;
+      &>a{
+        padding:8px 25px;
+        border-radius: 4px;
+        margin-left:22px;
+        cursor: pointer;
+        background-color: #428bca;
+        color:#fff;
+        &:hover{
+          background-color: #3276b1;
+        }
+        &:first-child{
+          margin-left:0;
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////media query
+
+@media screen and (min-width:1280px){
+
+}
+
+@media screen and (min-width:1366px){
+
+}

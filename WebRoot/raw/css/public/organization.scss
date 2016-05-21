@@ -1,0 +1,22 @@
+@import "../common/base.scss";
+@import "../common/list.scss";
+
+div.content{
+  div.listContent{
+     &>div.articleContent>div.list{
+       line-height: 2.2;
+       hr{
+         border:1px double #666;
+       }
+     }
+  }
+}
+
+//////////////////////////////////////////////media query
+@media screen and (min-width:1280px){
+
+}
+
+@media screen and (min-width:1366px){
+
+}

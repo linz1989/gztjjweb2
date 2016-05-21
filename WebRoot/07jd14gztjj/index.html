@@ -1,0 +1,950 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+    <title>统计局网站后台管理页面</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="shortcut icon" href="../admin/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="../admin/favicon.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="stylesheet" href="../admin/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../admin/dataTables.bootstrap.css"/>
+    <!--link rel="stylesheet" href="../css/jquery.dataTables.css"-->
+    <link rel="stylesheet" href="../admin/admin.css"/>
+    
+    <script type="text/javascript" src="../admin/jquery.min.js"></script>
+    <script type="text/javascript" src="../admin/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../admin/base.js"></script>
+    <!-- 配置文件 --> 
+    <script type="text/javascript" src="../ueditor/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="../ueditor/ueditor.all.js"></script>
+    <script type="text/javascript" src="../admin/md5.js"></script>
+    <script type="text/javascript" src="../admin/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../admin/dataTables.bootstrap.js"></script>
+    <!--swfObject-->
+    <script type="text/javascript" src="../admin/swfobject.js"></script>
+	<script type="text/javascript" src="../admin/admin.js"></script>
+</head>
+
+<body>
+<div class="dHead">
+	<div class="dHead-TopBar">
+		<div class="dHead-TopBar-Col1">赣州统计信息网后台管理系统</div>
+		<div id="dHeadTopBarCol2" class="dHead-TopBar-Col2 topBar-link">
+			<ul class="nav navbar-nav navBar-link" style="height:100%;">
+        		<li class="active" style="height:100%;">
+				<a href="javascript:void(0);" id="sysAdminLink" onClick="onClickOfSysAdminLink();" class="navBar-link nav-Bar-Link-Clicked"><span class="glyphicon glyphicon-cog"></span>&nbsp;系统管理&nbsp;</a>
+				</li>  
+        		<li style="height:100%;display:none;">
+				<a href="javascript:void(0);" id="indexAdminLink" onClick="onClickOfIndexAdminLink();" class="navBar-link"><span class="glyphicon glyphicon-home"></span>&nbsp;首页管理&nbsp;</a>
+				</li> 
+        		<li style="height:100%;">
+				<a href="javascript:void(0);" id="modalAdminLink" onClick="onClickOfModalAdminLink();" class="navBar-link"><span class="glyphicon glyphicon-list"></span>&nbsp;栏目管理&nbsp;</a>
+				</li>
+			</ul>
+		
+		   <a id="mainAdminLink" class="dHead-TopBar-Col2-Link topBar-link" href="javascript:void(0);">后台主页</a>
+		   <a class="dHead-TopBar-Col2-Link topBar-link" href="../index.html" target="_blank">网站主页</a>
+		   <a id="changePasswordLink" class="dHead-TopBar-Col2-Link" href="javascript:void(0);">修改密码</a>
+		   <a class="dHead-TopBar-Col2-Link" id="exitAdminLink" href="javascript:void(0);">退出</a>
+		</div>
+	</div>
+	<div class="dHead-SecondBar">
+		<div class="dHead-SecondBar-Col1" id="adminUserInfo">欢迎,superadmin[管理员]</div>
+		<div id="currPosInfoDiv" class="dHead-SecondBar-Col2">当前您的位置：后台管理主页</div> 
+	</div>
+</div>
+
+<div class="dBody"> 
+	<!--侧边栏-->
+	<div class="dBody-Sidebar"> 
+		<!--侧边栏中的导航-->
+		<div class="dBody-Sidebar-Nav">
+		
+			<div class="panel-group" style="margin-bottom:6px; margin-top:6px;" id="accordion">
+				
+				<!--用户权限管理 start-->
+				<div class="panel panel-default" id="UserRoleAdminPanel">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;"> 
+						<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseUserRoleAdmin">用户权限管理</a>
+						</h4>
+					</div>
+					<div id="collapseUserRoleAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group"> 
+							   <a href="javascript:void(0);" onClick="onClickOfUserAdminLink();" class="list-group-item list-group-item-custom">用户管理</a> 
+							   <!--a href="javascript:void(0);" onClick="onClickOfRoleAdminLink();" class="list-group-item list-group-item-custom">角色管理</a-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--用户权限管理 end-->
+				
+				<!--首页模块管理 start-->
+				<div class="panel panel-default" id="IndexBlockAdminPanel">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;">
+							<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseIndexBlockAdmin">首页模块管理</a>
+						</h4>
+					</div>
+					<div id="collapseIndexBlockAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group">
+								<a href="javascript:void(0);" onClick="onClickOfFirstNewsAdminLink2();" class="list-group-item list-group-item-custom">首页头条</a>
+								<a href="javascript:void(0);" onClick="onClickOfSlidePicAdminLink();" class="list-group-item list-group-item-custom">幻灯片图片管理</a>
+								<a href="javascript:void(0);" onClick=
+										"onClickOfDemeanourImageAdminLink();" class="list-group-item list-group-item-custom">风采图片管理</a>
+								<a href="javascript:void(0);" onClick=
+										"onClickOfDisHonestyAdminLink();" class="list-group-item list-group-item-custom">失信企业公示管理</a>
+								<a href="javascript:void(0);" style="display:none;" id="disonestyNoticeAdmin3" onClick="onClickOfDisHonestyInfoAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;专栏介绍</a>
+								<a href="javascript:void(0);" style="display:none;" id="disonestyNoticeAdmin1" onClick="onClickOfDisHonestyComponyAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;失信企业信息</a>
+								<a href="javascript:void(0);" style="display:none;" id="disonestyNoticeAdmin2" onClick="onClickOfDisHonestyNoticeLinkAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;各地公示链接</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--首页模块管理 end-->
+
+				<!--专题文章管理 start-->
+				<div class="panel panel-default" id="SubjectBlockAdminPanel">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;">
+							<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#subjectIndexBlockAdmin">专题文章管理</a>
+						</h4>
+					</div>
+					<div id="subjectIndexBlockAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group">
+								<a href="javascript:void(0);" onClick=
+										"onClickOfCensusSubjectAdminLink();" class="list-group-item list-group-item-custom">1%人口抽样调查专题管理</a>
+								<a href="javascript:void(0);" style="display:none;" id="workNewsOfCensusAdmin" onClick="onClickOfCensusWorkNewsAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;工作要闻</a>
+								<a href="javascript:void(0);" style="display:none;" id="workFilesOfCensusAdmin" onClick="onClickOfCensusWorkFilesAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;文件通知</a>
+								<a href="javascript:void(0);" style="display:none;" id="workExchangeOfCensusAdmin" onClick="onClickOfWorkExchangeAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;各地交流</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--专题文章管理 end-->
+			
+				<!--走进统计 start-->
+			    <div class="panel panel-default" id="EnterStatisticsAdminPanel" style="display:none;">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;"> 
+						<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOrgAdmin">组织机构</a>
+						</h4>
+					</div>
+					<div id="collapseOrgAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group"> 
+							   <a href="javascript:void(0);" onClick="onClickOfBureauProfileAdminLink();" class="list-group-item list-group-item-custom">本局概况</a> 
+							   <a href="javascript:void(0);" onClick="onClickOfLeaderProfileAdminLink();" class="list-group-item list-group-item-custom">领导介绍</a>
+							   <a href="javascript:void(0);" onClick="onClickOfOrgSettingAdminLink();" class="list-group-item list-group-item-custom">机构设置</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <!--走进统计 end-->
+				
+				<!--统计业务 start-->
+				<div class="panel panel-default" id="StatisticsJobAdminPanel" style="display:none;">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;"> 
+						<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseStatisticsJobAdmin">统计业务</a>
+						</h4>
+					</div>
+					<div id="collapseStatisticsJobAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group"> 
+							   <a href="javascript:void(0);" onClick="onClickOfWorkStateAdminLink();" class="list-group-item list-group-item-custom">市级工作动态</a>
+								<a href="javascript:void(0);" onClick="onClickOfWorkStateAdminLink2();" class="list-group-item list-group-item-custom">县级工作动态</a>
+							   <a href="javascript:void(0);" onClick="onClickOfPublicNoticeAdminLink();" class="list-group-item list-group-item-custom">公告通知</a>
+							   <a href="javascript:void(0);" onClick="onClickOfSubjectAdminLink();" class="list-group-item list-group-item-custom">专题聚焦</a>
+							   <a href="javascript:void(0);" onClick="onClickOfLeaderSpeakAdminLink();" class="list-group-item list-group-item-custom">领导讲话</a>
+							   <a href="javascript:void(0);" onClick="onClickOfWorkCommunicateAdminLink();" class="list-group-item list-group-item-custom">工作交流</a>
+							   <a href="javascript:void(0);" onClick=
+"onClickOfStatisticsMienAdminLink();" class="list-group-item list-group-item-custom">统计风采</a>
+							   
+							</div>
+						</div>
+					</div>
+				</div>
+			    <!--统计业务 end-->
+			    
+			    <!--统计数据 start-->
+				<div class="panel panel-default" id="StatisticsDataAdminPanel" style="display:none;">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;"> 
+						<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseStatisticsDataAdmin">统计数据</a>
+						</h4>
+					</div>
+					<div id="collapseStatisticsDataAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group"> 
+							   <a href="javascript:void(0);" onClick="onClickOfAllEconomicIndicatorAdminLink();" class="list-group-item list-group-item-custom">全市主要经济指标</a> 
+							   <a href="javascript:void(0);" onClick="onClickOfPlaceEconomicIndicatorAdminLink();" class="list-group-item list-group-item-custom">各县主要经济指标</a>
+							   <a href="javascript:void(0);" onClick="onClickOfYearBulletinAdminLink();" class="list-group-item list-group-item-custom">全市年度公报</a>
+							    <a href="javascript:void(0);" onClick="onClickOfYearBulletin2AdminLink();" class="list-group-item list-group-item-custom">各县年度公报</a>
+								<a href="javascript:void(0);" onClick="onClickOfGeneralSurveyBulletinAdminLink();" class="list-group-item list-group-item-custom">普查公报</a>
+							   <a href="javascript:void(0);" onClick="onClickOfGanzhouMapDataAdminLink();" class="list-group-item list-group-item-custom">图说赣州</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <!--统计数据 end-->
+								
+				<!--统计分析 start-->
+				<div class="panel panel-default" id="StatisticsAnalysisAdminPanel" style="display:none;">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;"> 
+						<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseStatisticsAnalysisAdmin">统计分析</a>
+						</h4>
+					</div>
+					<div id="collapseStatisticsAnalysisAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group"> 
+							   <a href="javascript:void(0);" onClick="onClickOfBriefInfoAdminLink();" class="list-group-item list-group-item-custom">市级简要信息</a>
+								<a href="javascript:void(0);" onClick="onClickOfBriefInfoAdminLink2();" class="list-group-item list-group-item-custom">县级简要信息</a>
+								<a href="javascript:void(0);" onClick="onClickOfRunningAnalysisAdminLink();" class="list-group-item list-group-item-custom">市级运行分析</a>
+								<a href="javascript:void(0);" onClick="onClickOfRunningAnalysisAdminLink2();" class="list-group-item list-group-item-custom">县级运行分析</a>
+								<a href="javascript:void(0);" onClick="onClickOfSynthesizeSurveyAdminLink();" class="list-group-item list-group-item-custom">综合调研</a>
+							   <a href="javascript:void(0);" onClick="onClickOfEconomyViewpointAdminLink();" class="list-group-item list-group-item-custom">经济观点</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <!--统计分析 end-->
+			    
+			    <!--统计建设 start-->
+				<div class="panel panel-default" id="StatisticsConstructAdminPanel" style="display:none;">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;"> 
+						<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseStatisticsConstructAdmin">统计建设</a>
+						</h4>
+					</div>
+					<div id="collapseStatisticsConstructAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group"> 
+							   <a href="javascript:void(0);" onClick="onClickOfPartBuildingAdminLink();" class="list-group-item list-group-item-custom">党建工作</a>
+							   <a href="javascript:void(0);" onClick="onClickOfInspectionWorkAdminLink();" class="list-group-item list-group-item-custom">纪检监察</a>
+							   <a href="javascript:void(0);" onClick="onClickOfEducationTrainAdminLink();" class="list-group-item list-group-item-custom">教育培训</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <!--统计建设 end-->
+				
+				<!--统计知识 start-->
+				<div class="panel panel-default" id="StatisticsKnowledgeAdminPanel" style="display:none;">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;"> 
+						<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseStatisticsKnowledgeAdmin">统计知识</a>
+						</h4>
+					</div>
+					<div id="collapseStatisticsKnowledgeAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group"> 
+							   <a href="javascript:void(0);" onClick="onClickOfStatisticsSystemAdminLink1();" class="list-group-item list-group-item-custom">统计制度</a>
+							   <a href="javascript:void(0);" onClick="onClickOfStatisticsStandardAdminLink();" class="list-group-item list-group-item-custom">统计标准</a>
+							   <a href="javascript:void(0);" onClick="onClickOfStatisticsIndexdAdminLink();" class="list-group-item list-group-item-custom">统计指标</a>
+							   <a href="javascript:void(0);" onClick="onClickOfStatisticsRuleAdminLink();" class="list-group-item list-group-item-custom">统计法规</a>
+							   <a href="javascript:void(0);" onClick="onClickOfStatisticsKnowledgeAdminLink();" class="list-group-item list-group-item-custom">统计知识</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <!--统计知识 end-->
+				
+				<!--经济要闻 start-->
+				<div class="panel panel-default" id="EconomicNewsAdminPanel" style="display:none;">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;"> 
+						<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseEconomicNewsAdmin">经济要闻</a>
+						</h4>
+					</div>
+					<div id="collapseEconomicNewsAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group"> 
+							   <a href="javascript:void(0);" onClick="onClickOfInternationalNewsAdminLink();" class="list-group-item list-group-item-custom">国际要闻</a> 
+							   <a href="javascript:void(0);" onClick="onClickOfCivilNewsAdminLink();" class="list-group-item list-group-item-custom">国内要闻</a>
+							   <a href="javascript:void(0);" onClick="onClickOfViewpointAssembleAdminLink();" class="list-group-item list-group-item-custom">观点荟萃</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <!--经济要闻 end-->
+				
+				<!--统计服务 start-->
+				<div class="panel panel-default" id="StatisticsServiceAdminPanel" style="display:none;">
+					<div class="panel-heading panel-heading-custom">
+						<h4 class="panel-title" style="font-size:14px; font-weight:bold;"> 
+						<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseStatisticsServiceAdmin">统计服务</a>
+						</h4>
+					</div>
+					<div id="collapseStatisticsServiceAdmin" class="panel-collapse collapse">
+						<div class="panel-body nav-Panel-Body">
+							<div class="list-group nav-List-Group"> 
+							   <a href="javascript:void(0);" onClick="onClickOfNoteBookAdminLink();" class="list-group-item list-group-item-custom">统计咨询</a>
+							   <!--网上办事 start-->
+							   <a href="javascript:void(0);" id="OnlineWorkingAdmin1" onClick="onClickOfQualificationTestAdminLink();" class="list-group-item list-group-item-custom">统计从业资格考试</a>
+							   <a href="javascript:void(0);" style="display:none;" id="OnlineWorkingAdmin14" onClick="onClickOfQualificationTestDynamicAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;考试动态</a>	
+							   <a href="javascript:void(0);" style="display:none;" id="OnlineWorkingAdmin11" onClick="onClickOfQualificationTestInfoAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;考试文件</a>	
+							   <a href="javascript:void(0);" style="display:none;" id="OnlineWorkingAdmin12" onClick="onClickOfQualificationTestTableAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;表格下载</a>	
+							   <a href="javascript:void(0);" style="display:none;" id="OnlineWorkingAdmin13" onClick="onClickOfExamScoreAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;成绩查询</a>
+							   <a href="javascript:void(0);" id="OnlineWorkingAdmin2" onClick="onClickOfAdministratortiveLicenAdminLink();" class="list-group-item list-group-item-custom">统计行政许可</a>	
+							   <a href="javascript:void(0);" id="OnlineWorkingAdmin3" onClick="onClickOfDataDownloadAdminLink();" class="list-group-item list-group-item-custom">软件下载</a>
+								<a href="javascript:void(0);" onClick="onClickOfOpinionCollect();" class="list-group-item list-group-item-custom">意见征集</a>
+								<a href="javascript:void(0);" id="placeStatisticsProjectAdmin" onClick="onClickOfPlaceStatisticsProjectAdminLink();" class="list-group-item list-group-item-custom">地方统计调查项目管理</a>
+								<a href="javascript:void(0);" style="display:none;" id="projectAdmin1" onClick="onClickOfProjectProcedureAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;办事程序</a>
+								<a href="javascript:void(0);" style="display:none;" id="projectAdmin2" onClick="onClickOfProjectTableDownloadAdminLink();" class="list-group-item list-group-item-custom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;表格下载</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <!--统计服务 end--> 
+				
+		   </div>
+		   </div>
+		   
+		<!--侧边栏中的底部-->
+		<div class="dBody-Sidebar-Foot">
+			<hr class="dBody-Sidebar-Hr"/>  
+			<div id="dFootDateInfo"></div>
+			<div>&copy; 2014 赣州福雷斯科技有限公司</div>
+		</div>
+	</div>
+	
+	
+	<div id="mainContentDiv" class="dBody-Content">
+	
+	<!--================================右侧的主内容区域 start===========================-->	
+	
+    <!--================================右侧的主内容区域 end ==============================-->
+	</div>
+</div>
+
+<!--=====================修改密码的模态框 start=======================-->
+<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel" style="color:#fff;">修改密码</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom:0px;">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="oldPassword" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">旧密码：</label>
+						<div class="col-sm-8">
+							<input type="password" class="form-control" id="oldPassword" name="oldPassword" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="newPassword" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">新密码：</label>
+						<div class="col-sm-8">
+							<input type="password" class="form-control" id="newPassword" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="newPasswordConfirm" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">确认新密码：</label>
+						<div class="col-sm-8">
+							<input type="password" class="form-control" id="newPasswordConfirm" placeholder="">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<label id="checkPasswordInfoLabel" style="font-size:14px;text-align:center;width:160px;color:#cc6666;font-weight:normal;"></label>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+				<button type="button" id="changePasswordBtn" onClick="saveNewPassword();" class="btn btn-primary">&nbsp;保存&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================修改密码的模态框 end=======================-->
+
+<!--=====================添加用户的模态框 start=======================-->
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="userModalLabel" style="color:#fff;">添加用户</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom:0px;">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="um_UserName" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">用户名：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="um_UserName" name="um_UserName" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="um_RealName" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">真实名：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="um_RealName" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="um_UserRole" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">用户角色：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="um_UserRole" placeholder="">
+						</div>
+					</div>
+					
+					<div id="passwordGroup" class="form-group">
+						<label for="um_UserPassword" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">用户密码：</label>
+						<div class="col-sm-8">
+							<input type="password" class="form-control" id="um_UserPassword" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="um_UserRemark" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">备注：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="um_UserRemark"  placeholder="">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<label id="checkUserInfoLabel" style="font-size:14px;text-align:center;width:160px;color:#cc6666;font-weight:normal;"></label>
+				<button type="button" class="btn btn-primary" id="resetPasswordButton" onClick="resetPassword();">重置密码</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+				<button type="button" id="userAdminBtn" onClick="saveUser();" class="btn btn-primary">&nbsp;保存&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================添加用户的模态框 end=======================-->
+
+<!--=====================添加角色的模态框 start=======================-->
+<div class="modal fade" id="roleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="roleModalLabel" style="color:#fff;">添加角色</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom:0px;">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="rm_RoleName" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">角色名：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="rm_RoleName" name="rm_RoleName" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="rm_RoleFunction" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">角色功能：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="rm_RoleFunction" placeholder="">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<label id="checkRoleInfoLabel" style="font-size:14px;text-align:center;width:160px;color:#cc6666;font-weight:normal;"></label>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+				<button type="button" id="roleAdminBtn" onClick="saveRole();" class="btn btn-primary">&nbsp;保存&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================添加角色的模态框 end=======================-->
+
+<!--=====================添加经济指标的模态框 start=======================-->
+<div class="modal fade" id="economicIndicatorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="economicIndicatorModalLabel" style="color:#fff;">添加经济指标</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom:0px;">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="eim_yearMonth" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">年月：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="eim_yearMonth"/>
+							<input type="text" style="display:none;" id="eim_place"/>
+							<input type="text" style="display:none;" id="eim_id"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="eim_indicator" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">指标名称：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="eim_indicator" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="eim_unit" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">单位：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="eim_unit" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="eim_indicatorValue" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">指标值：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="eim_indicatorValue" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="eim_indicatorGrowth" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">同比±%：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="eim_indicatorGrowth" placeholder="">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<label id="checkEconomicIndicatorInfoLabel" style="font-size:14px;text-align:center;width:160px;color:#cc6666;font-weight:normal;"></label>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+				<button type="button" id="economicIndicatorAdminBtn" onClick="saveEconomicIndicator();" class="btn btn-primary">&nbsp;保存&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================添加经济指标的模态框 end=======================-->
+
+<!--=====================添加各县经济指标的模态框 start=======================-->
+<div class="modal fade bs-example-modal-lg" id="economicIndicatorModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="economicIndicatorModalLabel2" style="color:#fff;">添加经济指标</h4> 
+			</div>
+			<div class="modal-body" style="padding-bottom:0px;">
+				<form class="form-horizontal" role="form">
+				
+					<div class="form-group">
+						<label for="eim2_yearMonth" class="col-sm-5 control-label" style="font-size:14px;font-weight:normal;">年月：</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="eim2_yearMonth"/>
+							<input type="text" style="display:none;" id="eim2_id"/>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="eim2_place" class="col-sm-5 control-label" style="font-size:14px;font-weight:normal;">县(市、区)：</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="eim2_place" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="eim2_sc" class="col-sm-5 control-label" style="font-size:14px;font-weight:normal;">生产总值(亿元)：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_scV" placeholder="">
+						</div>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_scP" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="eim2_cz" class="col-sm-5 control-label" style="font-size:14px;font-weight:normal;">财政总收入(亿元)：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_czV" placeholder="">
+						</div>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_czP" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="eim2_gg" class="col-sm-5 control-label" style="font-size:14px;font-weight:normal;">公共财政预算收入(亿元)：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_ggV" placeholder="">
+						</div>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_ggP" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="eim2_gm" class="col-sm-5 control-label" style="font-size:14px;font-weight:normal;">规模以上工业增加值(亿元)：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_gmV" placeholder="">
+						</div>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_gmP" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="eim2_gd" class="col-sm-5 control-label" style="font-size:14px;font-weight:normal;">固定资产投资(亿元)：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_gdV" placeholder="">
+						</div>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_gdP" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label id="form_xe" for="eim2_xe" class="col-sm-5 control-label" style="font-size:14px;font-weight:normal;">限额以上消费品零售额(亿元)：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_xeV" placeholder="">
+						</div>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_xeP" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="eim2_sj" class="col-sm-5 control-label" style="font-size:14px;font-weight:normal;">实际利用外资(万美元)：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_sjV" placeholder="">
+						</div>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_sjP" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="eim2_ck" class="col-sm-5 control-label" style="font-size:14px;font-weight:normal;">出口总额(万美元)：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_ckV" placeholder="">
+						</div>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="eim2_ckP" placeholder="">
+						</div>
+					</div>
+					
+				</form>
+			</div>
+			<div class="modal-footer">
+				<label id="checkEconomicIndicatorInfoLabel2" style="font-size:14px;text-align:center;width:160px;color:#cc6666;font-weight:normal;"></label>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+				<button type="button" id="economicIndicatorAdminBtn2" onClick="saveEconomicIndicator2();" class="btn btn-primary">&nbsp;保存&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================添加各县经济指标的模态框 end=======================-->
+
+<!--=====================修改地图数据的模态框 start=======================-->
+<div class="modal fade" id="mapDataModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="mapDataModalLabel" style="color:#fff;">修改地图链接</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom:0px;">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="mp_place" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">县(市、区)：</label>
+						<div class="col-sm-8">
+							<input type="hidden" id="mp_placePy"/>
+							<input type="text" disabled class="form-control" id="mp_place"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="mp_placeLink" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">链接地址：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="mp_placeLink" placeholder="">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<label id="mapDataInfoLabel" style="font-size:14px;text-align:center;width:160px;color:#cc6666;font-weight:normal;"></label>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+				<button type="button" id="mapDataAdminBtn" onClick="saveMapData();" class="btn btn-primary">&nbsp;保存&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================修改地图数据的模态框 end=======================-->
+
+<!--=====================专题的模态框 start=======================-->
+<div class="modal fade" id="subjectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="subjectModalLabel" style="color:#fff;">添加新专题</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom:0px;">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="sub_subjectName" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">专题名称：</label>
+						<div class="col-sm-8">
+							<input type="hidden" id="sub_id"/>
+							<input type="text" class="form-control" id="sub_subjectName"/>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="sub_imagePath" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">图片地址：</label>
+						<div class="col-sm-8">
+							<input type="text" disabled class="form-control" id="sub_imagePath" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+					   <label for="sub_isOutLink" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;"></label>
+						<div class="col-sm-4">
+						   <div class="checkbox" ><label><input type="checkbox" checked="false" id="sub_isOutLink" onClick="enableOutLinkInputOfSubject();">是否为外部链接专题</label></div>
+						</div>
+					</div> 
+					
+					<div class="form-group">
+						<label for="sub_outLink" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">外部链接地址：</label>
+						<div class="col-sm-8">
+							<input type="text"  class="form-control" id="sub_outLink" placeholder="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+					   <label for="sub_isMain" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;"></label>
+						<div class="col-sm-3">
+							<div id="uploadSubjectImageDiv"></div>
+						</div>
+						<div class="col-sm-4">
+						   <div class="checkbox" ><label><input type="checkbox" checked="false" id="sub_isMain">是否为主专题</label></div>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+			<div class="modal-footer">
+				<label id="subjectInfoLabel" style="font-size:14px;text-align:center;width:160px;color:#cc6666;font-weight:normal;"></label>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+				<button type="button" id="mapDataAdminBtn" onClick="saveSubjectData();" class="btn btn-primary">&nbsp;保存&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================专题的模态框 end=======================-->
+
+<!--=====================考试成绩的模态框 start=======================-->
+<div class="modal fade" id="ExamScoreModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="examScoreModalLabel" style="color:#fff;">考试成绩</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom:0px;">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="es_yearMonth" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">考试年月：</label>
+						<div class="col-sm-8">
+							<input type="hidden" id="es_id"/>
+							<input type="text" class="form-control" id="es_yearMonth"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="es_name" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">考生姓名：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="es_name" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="es_idCardNumber" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">身份证号：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="es_idCardNumber" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="es_examCardNumber" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">准考证号：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="es_examCardNumber" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="es_amScore" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">科目一成绩：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="es_amScore" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="es_pmScore" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">科目二成绩：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="es_pmScore" placeholder="">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<label id="examScoreInfoLabel" style="font-size:14px;text-align:center;width:300px;color:#cc6666;font-weight:normal;"></label>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+				<button type="button" id="examScoreAdminBtn" onClick="saveExamScore();" class="btn btn-primary">&nbsp;保存&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================考试成绩的模态框 end=======================-->
+
+<!--=====================留言的模态框 start=======================-->
+<div class="modal fade" id="NoteBookModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+       <div class="modal-content"> 
+          <div class="modal-header" style="background-color:rgb(66,139,202)">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="noteBookModalLabel" style="color:#fff;">留言详情</h4>
+          </div>
+          <div class="modal-body" style="padding-bottom:0px; padding-top:14px;">
+              <div id="notebox">
+                 <form class="form-horizontal notepad" role="form"> 
+                    <table>
+                       <tr>
+                          <td style="text-align:right;width:100px;">留言人：</td>
+                          <td style="width:430px;"><input disabled name="nb_name" id="nb_name" type="text" class="form-control input-sm text" />
+						  <input disabled name="nb_id" id="nb_id" type="hidden"/></td>
+						  
+						  <td style="text-align:right;width:60px;">性别：</td>
+                          <td style="width:90px;"><input disabled type="text" name="nb_sex" id="nb_sex" class="form-control input-sm text" /></td>
+						  
+                       </tr>
+                       
+					   <tr>
+                          <td style="text-align:right">电子邮件：</td>
+                          <td colspan="3"><input disabled type="text" name="nb_email" id="nb_email" class="form-control input-sm text" /></td>
+                       </tr>
+                                      
+					   <tr>
+                          <td style="text-align:right">留言标题：</td>
+                          <td colspan="3"><input disabled type="text" id="nb_noteTitle" name="nb_noteTitle" class="form-control input-sm text" /></td>
+                       </tr>
+                                
+					   <tr>
+                          <td style="text-align:right">留言内容：</td>
+                          <td colspan="3"><textarea disabled name="nb_noteContent" id="nb_noteContent" class="form-control" rows="5"></textarea></td>
+                       </tr>  
+					   
+					   <tr>
+                          <td style="text-align:right">回复人：</td>
+                          <td colspan="3"><input type="text" name="nb_noteReplayUser" id="nb_noteReplayUser" class="form-control input-sm text" /></td>
+                       </tr>
+					   
+					   <tr>
+                          <td style="text-align:right">回复内容：</td>
+                          <td colspan="3"><textarea  name="nb_noteReplay" id="nb_noteReplay" class="form-control" rows="9"></textarea></td>
+                       </tr>  
+					                                 
+                    </table>
+                  </form>
+				 </div>
+
+                </div>
+                <div class="modal-footer">
+                    <label id="noteBookReplyLabel" style="font-size:14px;text-align:center;width:160px;color:#cc6666;font-weight:normal;"></label>
+                    <button type="button" id="replayNoteBookBtn" onClick="replayNoteBook();" class="btn btn-primary">&nbsp;回复&nbsp;</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button> 
+                </div>
+            </div>
+        </div>
+</div>
+<!--=====================留言的模态框 end=======================-->
+<!--=====================失企业公示链接 start=======================-->
+<div class="modal fade" id="dishonestyLinkModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="dishonestyLinkModalLabel" style="color:#fff;">新增公示链接</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom:0px;">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="dl_typeInfo" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">类别：</label>
+						<div class="col-sm-8">
+							<input type="text" disabled class="form-control" id="dl_type"/>
+                            <input type="hidden" disabled class="form-control" id="dl_id"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="dl_placeName" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">地区名：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="dl_placeName" placeholder=""/>
+						</div>
+					</div>
+                    <div class="form-group">
+						<label for="dl_link" class="col-sm-3 control-label" style="font-size:14px;font-weight:normal;">链接地址：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="dl_link" placeholder=""/>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<label id="dishonestyLinkInfoLabel" style="font-size:14px;text-align:center;width:160px;color:#cc6666;font-weight:normal;"></label>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+				<button type="button" onClick="saveDishonestyLink();" class="btn btn-primary">&nbsp;保存&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================失企业公示链接的模态框 end=======================-->
+
+<!--=====================移动文章的模态框 start=======================-->
+<div class="modal fade" id="moveArticleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="moveArticleModalLabel" style="color:#fff;">移动文章至：</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom:0px;">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<div class="col-sm-12">
+                        	<label class="col-sm-2 control-label" style="font-size:14px;font-weight:normal;">栏目：</label>
+                        	<div class="btn-group">
+							<button class="btn btn-default btn-sm dropdown-toggle" id="selectMainCategoryBtn" type="button" data-toggle="dropdown"></button>
+        					<ul class="dropdown-menu" role="menu" style="min-width:100px;">
+          						<li><a href="javascript:void(0);" onclick="selectMainCategory('统计业务');">统计业务</a></li>
+          						<li><a href="javascript:void(0);" onclick="selectMainCategory('统计数据');">统计数据</a></li>
+          						<li><a href="javascript:void(0);" onclick="selectMainCategory('统计分析');">统计分析</a></li>
+          						<li><a href="javascript:void(0);" onclick="selectMainCategory('统计建设');">统计建设</a></li>
+								<li><a href="javascript:void(0);" onclick="selectMainCategory('统计知识');">统计知识</a></li>
+								<li><a href="javascript:void(0);" onclick="selectMainCategory('经济要闻');">经济要闻</a></li>
+                    			<li><a href="javascript:void(0);" onclick="selectMainCategory('统计服务');">统计服务</a></li>
+        					</ul>
+      						</div>
+                            <div class="btn-group" style="margin-left:10px">
+                            <input type="hidden" id="moveArticleCategory"/>
+                            <input type="hidden" id="unmoveArticleCategory"/>
+                            <input type="hidden" id="moveArticleID"/>
+							<button class="btn btn-default btn-sm dropdown-toggle" id="selectSubCategoryBtn" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+        					<ul id="subCategoryUl" class="dropdown-menu" role="menu" style="min-width:130px;"></ul>
+      						</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<label id="checkMoveArticleInfo" style="font-size:14px;text-align:center;width:160px;color:#cc6666;font-weight:normal;"></label>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+				<button type="button" id="moveArticleBtn" onClick="moveArticle();" class="btn btn-primary">&nbsp;确定&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================移动文章的模态框 end=======================-->
+
+<!--=====================查看意见的模态框 start=======================-->
+<div class="modal fade" id="OpinionsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color:rgb(66,139,202)">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="opinionsModalLabel" style="color:#fff;">意见详情</h4>
+			</div>
+			<div class="modal-body" style="padding-bottom:0px; padding-top:14px;">
+				<textarea  name="opinionsTextArea" id="opinionsTextArea" class="form-control" rows="9"></textarea>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">&nbsp;关闭&nbsp;</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--=====================查看意见的模态框 end=======================-->
+
+</body>
+</html>

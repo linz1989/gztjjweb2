@@ -1,0 +1,31 @@
+<!--按钮区域-->
+<div class="operator-Btn-Group" id="operatorButtonDiv">
+  	<button id="backArticleListButton" type="button" style="display:none;" onClick="backArticleListPage();" class="btn btn-primary btn-sm">&nbsp;返回&nbsp;</button>
+	<button id="saveArticleButtonOfEdit" type="button" onClick="saveArticle();" class="btn btn-primary btn-sm">&nbsp;保存&nbsp;</button><span id="articleInfoText" style="color:#666; font-size:12px; padding-left:30px;">创建人：superadmin&nbsp;&nbsp;&nbsp;&nbsp;创建时间：2014-06-18 20:59:12&nbsp;&nbsp;&nbsp;&nbsp;发表时间：2014-06-18 20:59:12&nbsp;&nbsp;&nbsp;&nbsp;浏览次数：0
+</span></div>
+<hr style="width:100%; margin-top:0px; margin-bottom:2px;">
+
+<table id="articleFormZoneDiv" class="table table-condensed" style="margin-bottom:8px; display:none;">
+	<tbody>
+		<tr>
+			<td width="80px;" style="text-align:center; padding-top:10px !important; border-top-width:0px;"><span>标题：</span></td>
+			<td colspan="3" style="border-top-width:0px;"><input type="text" class="form-control input-sm" id="articleTitle"><input type="text" class="form-control input-sm" id="articleId" style="visibility:hidden;width:0px; display:none;"/><input type="text" class="form-control input-sm" id="articleCategory" style="visibility:hidden;width:0px; display:none;"/>
+			<input id="articleSubjectName" type="hidden"/>
+			<input id="articleSubjectId" type="hidden"/>
+			<input id="articleCityName" type="hidden"/>
+			</td>
+		</tr>
+		<tr>
+			<td width="80px;" style="text-align:center;padding-top:10px !important;border-top-width:0px;"><span>来源：</span></td>
+			<td style="border-top-width:0px;"><input type="text" class="form-control input-sm" id="articleOrigin"></td>
+			<td width="80px;" style="text-align:center;padding-top:10px !important;border-top-width:0px;"><span>添加者：</span></td>
+			<td style="border-top-width:0px;"><input type="text" class="form-control input-sm" id="articleAuthor"></td>
+		</tr>
+	</tbody>
+</table>
+<div id="intervalDivZone" style="height:5px; display:none;"></div>
+
+<!-- 加载编辑器的容器 -->
+<script id="UEditorContainer" name="content" type="text/plain">
+    
+</script>

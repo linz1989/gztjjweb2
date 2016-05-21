@@ -1,0 +1,131 @@
+@import "../common/base.scss";
+@import "../common/list.scss";
+
+div.content{
+  div.listContent{
+    overflow-x: auto;
+    padding-left:0;
+    &>h2{
+      text-align: center;
+      font-weight: bold;
+      font-size:24px;
+      line-height: 60px;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      &>a{
+        float: right;
+        margin-right:10px;
+        font-size:16px;
+        font-weight:normal;
+        color:#4d4d4d;
+      }
+    }
+    &>table{
+      border-right: 1px solid #aaa;
+      border-bottom: 1px solid #aaa;
+      margin-left: auto;
+      margin-right: auto;
+      width: 96%;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+      td,th{
+        border-left: 1px solid #aaa;
+        border-top: 1px solid #aaa;
+        height: 40px;
+      }
+      th{
+        font-weight: bold;
+        text-align: center;
+      }
+      &>thead{
+        background: #eee;
+      }
+      tr.even{
+        background: #eee;
+      }
+    }
+    &>div{
+      width:96%;
+      margin:45px auto 20px;
+      padding-top:10px;
+      border-top:1px solid #ddd;
+      line-height: 32px;
+      &>a{
+        color:#4d4d4d;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  div.city{
+    &>table{
+      th{
+        height:45px;
+      }
+      tr.odd,tr.even{
+        td:first-child{
+          text-align: left;
+          padding-left:20px;
+        }
+      }
+    }
+  }
+  div.county{
+    &>table{
+      th{
+        font-weight: bold;
+        text-align: center;
+        height:60px;
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////media query
+@media print{
+  .noPrint{ display : none !important; }
+  div.content{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+}
+@media screen and (max-width:749px){
+  div.content {
+    & > div.listContent {
+      & > h2>a {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width:374px){
+  div.content{
+    &>div.listContent{
+      &>h2{
+        font-size:20px;
+        line-height: 50px;
+      }
+      &>table{
+        font-size: 12px;
+      }
+      &>div{
+        font-size:14px;
+      }
+    }
+
+    div.city>table tr td:first-child{
+      padding-left:5px !important;
+    }
+  }
+}
+@media screen and (min-width:1280px){
+
+}
+
+@media screen and (min-width:1366px){
+
+}

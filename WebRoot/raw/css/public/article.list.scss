@@ -1,0 +1,22 @@
+@import "../common/base.scss";
+@import "../common/list.scss";
+
+div.content{
+  div.listContent{
+    &>ul.navMenu{
+      //padding-bottom: 80px;
+    }
+    &>div.articleContent{
+      min-height: 380px;
+    }
+  }
+}
+
+//////////////////////////////////////////////media query
+@media screen and (min-width:1280px){
+
+}
+
+@media screen and (min-width:1366px){
+
+}

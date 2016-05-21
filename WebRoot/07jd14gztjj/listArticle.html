@@ -1,0 +1,55 @@
+<table id="searchZoneDiv" class="table table-condensed" style="margin-bottom:0px;">
+	<tbody>
+		<tr>
+			<td width="60%" style="border-top-width:0px !important; text-align:left;padding-bottom:2px !important; padding-left:0px !important;">
+			<button id="backSubjectListButton" style="display:none;" type="button" onClick="onClickOfSubjectAdminLink();" class="btn btn-primary btn-sm">&nbsp;返回&nbsp;</button>
+			<button id="addArticleButton" type="button" onClick="onClickAddNewArticle();" class="btn btn-primary btn-sm">&nbsp;添加&nbsp;</button>
+			<button id="batchDelArticleButton" type="button" onClick="onClickBatchDelArticle();" class="btn btn-primary btn-sm">&nbsp;删除&nbsp;</button>
+			<input id="articleCategory" type="hidden"></input>
+			<input id="articleSubjectName" type="hidden"></input>
+			<input id="articleSubjectId" type="hidden"></input>
+			</td>
+			<td id="articleTabTd2" style="border-top-width:0px;padding-bottom:2px !important">
+			<input type="text" class="form-control input-sm" id="searchArticleKey" placeholder="输入关键词" onkeypress="onKeyPressSearchArticleInput(event);" />
+			</td>
+			
+			<td id="articleTabTd4" style="display:none;text-align:right;border-top-width:0px !important; padding-right:10px !important; padding-bottom:2px !important">
+			<!--县市区 start-->
+				<div class="btn-group" id="ganzhouCityList">
+				<button class="btn btn-default btn-sm dropdown-toggle" id="ganzhouCityBtn" type="button" data-toggle="dropdown">章贡区&nbsp;<span class="caret"></span></button>
+        		<ul class="dropdown-menu" role="menu" style="min-width:100px;">
+          			<li><a href="javascript:void(0);" onclick="selectGanZhouCity('章贡区');">章贡区</a></li>
+          			<li><a href="javascript:void(0);" onclick="selectGanZhouCity('南康区');">南康区</a></li>
+          			<li><a href="javascript:void(0);" onclick="selectGanZhouCity('赣县');">赣县</a></li>
+          			<li><a href="javascript:void(0);" onclick="selectGanZhouCity('于都县');">于都县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('兴国县');">兴国县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('宁都县');">宁都县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('瑞金市');">瑞金市</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('信丰县');">信丰县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('会昌县');">会昌县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('安远县');">安远县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('龙南县');">龙南县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('石城县');">石城县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('寻乌县');">寻乌县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('上犹县');">上犹县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('大余县');">大余县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('定南县');">定南县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('崇义县');">崇义县</a></li>
+					<li><a href="javascript:void(0);" onclick="selectGanZhouCity('全南县');">全南县</a></li>
+        		</ul>
+      			</div>
+			<!--县市区 end-->
+			</td>
+			
+			<td width="60px;" id="articleTabTd3" style="text-align:right;border-top-width:0px !important; padding-right:1px !important; padding-bottom:2px !important"><button id="searchArticleButton" type="button" onClick="onClickSearchArticleButton();" class="btn btn-primary btn-sm">&nbsp;查询&nbsp;</button></td>
+		</tr>
+	</tbody>
+</table>
+<hr style="width:100%; margin-top:5px; margin-bottom:2px;">
+
+<!--数据列表-->
+<table id="listArticleDataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	<thead><tr>
+	<th>记录ID</th><th><input type="checkbox" id="CheckBoxAll" onclick="onClickCheckAllBox();" style="margin-right:3px; margin-top:5px;"/>全选</th><th>标题</th><th>来源</th><th>添加者</th><th>浏览次数</th><th>是否已发布</th><th>发布时间</th><th>操作</th><th>创建人</th><th>创建时间</th><th>关键词</th><th>分类</th>
+	</tr></thead>
+</table>

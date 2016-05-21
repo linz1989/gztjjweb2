@@ -1,0 +1,289 @@
+html, body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+/*更改默认字体*/
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { 
+	font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+
+/*后台管理登陆面板*/
+.admin-login-bg{
+	background:url("./img/loginbg.jpg") top center no-repeat;
+	background-size:cover;
+	width:100%;
+	height:100%;
+}
+
+.admin-login-panel{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-140px 0 0 -300px;
+	width:600px;
+	height:280px;
+}
+
+.dHead{
+	height: 93px;
+	line-height: 93px;
+	width: 100%;
+	position: absolute;
+	z-index: 5;
+	top: 0;
+}
+
+.dHead-TopBar{
+	width:100%;
+	height:55px;
+	line-height:55px;
+	background: rgb(66,139,202);
+}
+
+.dHead-TopBar-Col1{
+	float:left;
+	width:300px;
+	height:100%;
+	padding-left:20px;
+	color:#fff;
+	font-size:20px;
+}
+
+.dHead-TopBar-Col2{
+	margin-left:300px;
+	height:100%;
+	color:#666666;
+	font-size:15px;
+	text-align:right;
+	padding-right:20px;
+}
+
+.dHead-TopBar-Col2-Link{
+	color:#666666;
+	font-size:14px;
+	text-indent:72px;
+	margin-left:8px;
+	text-decoration:underline;
+}
+
+.topBar-link a:link {
+ color: #666666;
+ text-decoration:underline;
+}
+
+.navBar-link{
+	color:#333 !important;
+	text-decoration:none !important;
+	font-size:15px !important;
+	height:100% !important;
+}
+
+.nav > li > a:hover, .nav > li > a:focus{
+	background-color:#006699;
+	color:#fff !important;
+	outline-style:hidden !important;
+}
+
+.nav-Bar-Link-Clicked{
+	background-color:#006699;
+	color:#fff !important;
+	outline-style:hidden !important;
+}
+
+.topBar-link a:visited {
+ color: #666666;
+ text-decoration:underline;
+}
+
+.topBar-link a:hover {
+ color: #fff;
+ text-decoration: underline;
+}
+
+.topBar-link a:active {
+ color: #fff;  
+ text-decoration: underline;
+}
+
+.dHead-SecondBar-Col1{
+	float:left;
+	width:22%;
+	height:100%;
+	padding-left:20px;
+	font-size:13px;
+}
+
+.dHead-SecondBar-Col2{
+	margin-left:22%;
+	height:100%;
+	width:77%;
+	font-size:13px;
+	/*background: url(../images/secondary_bar_shadow.png) no-repeat left top;*/
+}
+
+.dHead-SecondBar{
+	width:100%;
+	height:38px;
+	line-height:38px;
+	background: #F1F1F4 url(./img/secondary_bar.png) repeat-x;
+}
+
+.dBody {
+	background: #fff;
+	width: 100%;
+	overflow: auto;
+	top: 93px;
+	position: absolute;
+	z-index: 10;
+	bottom: 0px;
+}
+
+.dBody-Sidebar{
+	float:left;
+	width:22%;
+	height:100%;
+	background-image:url("./img/sidebar.png");
+	background-repeat:repeat;
+}
+
+.dBody-Content{
+	margin-left:22%;
+	height:100%;
+	background-color:#fff;
+	overflow-y:auto;
+	overflow-x:hidden;
+	padding:5px;
+	padding-right:10px;
+}
+
+.dBody-Sidebar-Hr{
+	border: none;
+	outline: none;
+	background: url(./img/sidebar_divider.png) repeat-x;
+	display: block;
+	width: 100%;
+	height: 2px;
+	line-height:2px;
+	margin-bottom:2px;
+	margin-top:0px;
+}
+
+.dBody-Sidebar-Nav{
+	width: 22%;
+	height:100%;
+	overflow: auto;
+	position: absolute;
+	bottom: 60px;
+	padding-top:60px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.dBody-Sidebar-Foot {
+	height: 52px;
+	line-height: 24px;
+	width: 22%;
+	position: absolute;
+	z-index: 200;
+	bottom: 0;
+	text-align: center;
+	color:#000000;
+	font-size:13px;
+}
+
+.nav-Panel-Body{
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+.nav-List-Group{
+	margin-bottom:0px;
+}
+
+.dataTable-Tr-Selected{
+	background-color:rgb(66, 139, 202) !important;
+	color:#fff !important;
+}
+
+.dataTable-Tr-Hover{
+	background-color:rgb(249,249,249);
+}
+
+.operator-Btn-Group{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.list-group-item-custom{
+	padding-top:4px;
+	padding-bottom:4px;
+	text-indent:10px;
+}
+
+.panel-heading-custom{
+	padding-top:8px;
+	padding-bottom:8px;
+}
+
+.articleFormZone{
+	border-width: 1px 1px; 
+	border-style: solid; 
+	margin: 5px 0px 0px 0px; 
+	padding: 10px 5px 0px 0px; 
+	position: relative;
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(221, 221, 221); 
+	border-radius: 4px 4px 4px 4px; 
+}
+.form-label{
+	font-weight:normal;
+}
+
+.table > tbody > tr > td{
+	padding-top:6px !important;
+	padding-bottom:6px !important;
+	padding-left:4px !important;
+	padding-right:4px !important;
+}
+.table > thead > tr > th{
+	padding-top:6px !important;
+	padding-bottom:6px !important;
+	padding-left:4px !important;
+	padding-right:4px !important;
+}
+
+.article-Title-Link{
+	font-size:14px;
+	margin-left:0px;
+	text-decoration:none;
+	color:#000000 !important;
+}
+.dataTable-td-valign{
+	vertical-align:middle !important;
+}
+
+.notebox{
+    text-align: center;
+    width: 100%;
+}
+
+.notepad {    
+    margin: 15px 0 15 40px;
+    font-size: 14px;
+}
+
+.notepad th > img
+{
+    
+    text-align: center;
+    vertical-align: center;
+}
+.notepad td,.contactUs td {
+    padding: 4px;
+}
