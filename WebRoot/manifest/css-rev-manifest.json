@@ -1,15 +1,15 @@
 {
   "common/base.css": "common/base.css?v=d41d8cd98f",
-  "common/common.css": "common/common.css?v=deb3e2e564",
+  "common/common.css": "common/common.css?v=8b097ca3f7",
   "common/idangerous.swiper.css": "common/idangerous.swiper.css?v=bd60f9f47a",
-  "common/list.css": "common/list.css?v=349c9f7560",
+  "common/list.css": "common/list.css?v=50091cbdd7",
   "common/reset.css": "common/reset.css?v=74250c2f4b",
-  "public/article.css": "public/article.css?v=e44b044ffb",
-  "public/article.list.css": "public/article.list.css?v=c977a3819d",
-  "public/consult.css": "public/consult.css?v=5a09b5228b",
-  "public/economicIndex.css": "public/economicIndex.css?v=a671b03faf",
-  "public/index.css": "public/index.css?v=085afae56f",
-  "public/organization.css": "public/organization.css?v=79388dd54e",
-  "public/search.css": "public/search.css?v=7afe0a4b1d",
-  "public/statisticsService.css": "public/statisticsService.css?v=f976eb975b"
+  "public/article.css": "public/article.css?v=7f5247734d",
+  "public/article.list.css": "public/article.list.css?v=3fb1c22f3d",
+  "public/consult.css": "public/consult.css?v=b64c262974",
+  "public/economicIndex.css": "public/economicIndex.css?v=690e689f59",
+  "public/index.css": "public/index.css?v=ebe3500ee8",
+  "public/organization.css": "public/organization.css?v=a1c8a1e7f0",
+  "public/search.css": "public/search.css?v=b5c824b57e",
+  "public/statisticsService.css": "public/statisticsService.css?v=8fad934451"
 }

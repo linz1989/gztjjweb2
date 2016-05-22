@@ -23,10 +23,10 @@ div.content{
       border-bottom:1px solid #ccc;
       line-height: 48px;
       position: relative;
-      font-size:18px;
-      color:#254282;
+      font-size:20px;
+      color:#4d4d4d;
       &>a{
-        color:#254282;
+        color:#4d4d4d;
       }
       &>i{
         display: block;
@@ -333,11 +333,11 @@ div#onlineService{
       margin-top:10px;
       height:53px;
       line-height: 53px;
-      border:1px solid #ececec;
+      border:1px solid #ccc;
       border-radius: 4px;
       padding-left:49px;
       color:#4d4d4d;
-      @include transition(background-color 0.3s);
+      //@include transition(background-color 0.3s);
       &>i{
         display: block;
         width:32px;
@@ -349,6 +349,7 @@ div#onlineService{
       }
       &:hover{
         background-color: #428bca;
+        border-color:#428bca;
         color:#fff;
         cursor: pointer;
       }
@@ -506,7 +507,7 @@ div#statisticsData{
 div#subjectWrap{
   height:100px;
   position: relative;
-  padding:10px 0 10px 40px;
+  padding:10px 0 10px 5px;
   border:1px solid #d9d9d9;
   @include boxShadow(0 1px 1px rgba(0,0,0,.05));
   @include transition(all 0.3s);
@@ -516,6 +517,7 @@ div#subjectWrap{
     //@include t3d(0, -2px, 0);
   }
   &>div.subjectTitle{
+    display: none;
     position: absolute;
     top:-1px;
     left:-1px;
@@ -529,15 +531,15 @@ div#subjectWrap{
   &>div.subjectList{
     height:100%;
     div.swiper-slide{
-      width:208px;
+      width:218px;
       text-align: center;
       height:100px;
       line-height: 100px;
-      @include boxSizing();
-      margin-right:15px;
+      //margin-right:15px;
+      //@include boxSizing();
       &>a{
         display: block;
-        width:100%;
+        margin:0 5px;
         height:100%;
         &>img{
           width:100%;
@@ -705,19 +707,20 @@ div#statisticsFeature{
   &>div.panelContent{
     height:160px;
     padding-top:10px;
+    margin-left:-5px;
     div.swiper-slide{
       width:230px;
       height:160px;
       text-align: center;
-      margin-right:15px;
       &>a{
         display: block;
+        margin:0 5px;
         height:100%;
         text-align: center;
         line-height:30px;
         @include sl();
         color:#4d4d4d;
-        font-size:15px;
+        font-size:13px;
         &>img{
           width:230px;
           height:130px;

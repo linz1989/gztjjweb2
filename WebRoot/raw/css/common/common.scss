@@ -79,10 +79,9 @@ body{
     position: relative;
     &>div.title{
       background-color: #003d96;
-      background: -webkit-gradient(linear,0 0,0 100%,from(#003d96),to(#428bc0));
-      background: -moz-linear-gradient(#003d96, #428bc0);
-      background: -o-linear-gradient(#003d96, #428bc0);
-      background: linear-gradient(top center, #003d96, #428bc0);
+      background: -webkit-gradient(linear,0 0,0 100%,from(#003d96),to(rgba(66,61,192,0.5)));
+      background: -moz-linear-gradient(#003d96, rgba(66,61,192,0.5));
+      background: -o-linear-gradient(#003d96, rgba(66,61,192,0.5));
       filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=130) progid:DXImageTransform.Microsoft.gradient(startcolorstr='#003d96',endcolorstr='#428bc0',gradientType=0);
       &>div{
         //background: url("../../../img/public/common/bg.jpg") center top no-repeat;
@@ -225,7 +224,7 @@ body{
 
     &>div.content{
       width:970px;
-      margin:75px auto 0;
+      margin:80px auto 0;
       background-color: #fcfcfc;
       border:1px solid #ddd;
       //@include boxShadow(0 0 10px rgba(0, 0, 0, 0.3) inset );
@@ -234,7 +233,7 @@ body{
       -moz-border-radius: 6px;
       -ms-border-radius: 6px;
       border-radius: 6px;
-      @include boxShadow(0px 5px 12px rgba(0, 0, 0, 0.2));
+      @include boxShadow(0px 8px 12px rgba(0, 0, 0, 0.2));
       padding:12px 15px;
     }
 
@@ -619,7 +618,7 @@ body{
       &>div.title>div{
         width:470px;
         &>div.txt{
-          opacity: 0.15;
+          opacity: 0.1;
         }
       }
       &>div.menu{

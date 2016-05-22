@@ -422,7 +422,7 @@ $(function () {
         ////////////底部imgSlide
         $("div#statisticsFeatureSwiperContainer>div.swiper-wrapper").html(bottomSlideImgs);
         bottomImageSwiper = new Swiper("#statisticsFeatureSwiperContainer",{
-            autoplay : 3500 , loop : true, autoplayDisableOnInteraction : false , slidesPerView : 'auto', loopedSlides : switcher.length, spaceBetween : 15,
+            autoplay : 3500 , loop : true, autoplayDisableOnInteraction : false , slidesPerView : 'auto', loopedSlides : switcher.length,
             onInit : function(){
                 setTimeout(function(){
                     $("div#statisticsFeatureSwiperContainer").css("width",$("#statisticsFeature").width()+"px");
@@ -459,7 +459,7 @@ $(function () {
         }
         $("#subjectSwiperContainer>div.swiper-wrapper").html(subjectHtml);
         subjectImageSwiper = new Swiper("#subjectSwiperContainer",{
-            autoplay : 3500 , loop : true, autoplayDisableOnInteraction : false , slidesPerView : 'auto', loopedSlides : res["subject"].length, spaceBetween : 15,
+            autoplay : 3500 , loop : true, autoplayDisableOnInteraction : false , slidesPerView : 'auto', loopedSlides : res["subject"].length,
             onInit : function(){
                 setTimeout(function(){ $("div#subjectSwiperContainer").css("width",$("#subjectWrap").width()+"px") },1000);
             }
@@ -576,8 +576,10 @@ function createMap(){
 function doCreateMap(){
     ///地图
     var map = new AMap.Map('mapContainer',{
-        zoom : 6.5,
+        zoom : 7.5,
         resizeEnable : true,
+        zoomEnable : false,
+        scrollWheel : false,
         center: [115.200278,25.85097]
     });
     var infoWin = $("#ganzhuMap>div.info");
