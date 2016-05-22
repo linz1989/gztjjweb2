@@ -127,6 +127,7 @@ gulp.task('prodHtml', function(cb) {
     runSequence('cleanHtml','rev', cb);
 });
 
+
 gulp.task('default',function () {
     gulp.run('prod');
     gulp.run('connect');
@@ -228,6 +229,10 @@ gulp.task('publishSrc',function(){
 
 gulp.task('publishCom',function(){
     exists( 'compressed', '/opt/apache-tomcat-8.0.32/webapps/GztjjWeb/compressed', copy );
+});
+
+gulp.task('publishImg',function(){
+    exists( 'img', '/opt/apache-tomcat-8.0.32/webapps/GztjjWeb/img', copy );
 });
 
 gulp.task('copyFile', function (v) {

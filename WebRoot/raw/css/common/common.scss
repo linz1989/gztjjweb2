@@ -13,67 +13,71 @@
 }
 
 body{
+  background: url("../../../img/public/common/bg.png?base64") repeat;
   &>div.search{
-    width:1000px;
-    height:36px;
-    line-height: 36px;
-    margin:0 auto;
-    color:#4d4d4d;
-    font-size:14px;
-    position: relative;
-    &>i.star{
-      position: absolute;
-      display: block;
-      width:16px;
-      height:16px;
-      top:50%;
-      left:0;
-      margin-top:-8px;
-      background: url("../../../img/public/common/star.png?base64");
-    }
-    &>span{
-      margin-left:20px;
-      &:hover{
-        color:#428bca;
+    background-color: #fff;
+    &>div{
+      width:1000px;
+      height:36px;
+      line-height: 36px;
+      margin:0 auto;
+      color:#4d4d4d;
+      font-size:14px;
+      position: relative;
+      &>i.star{
+        position: absolute;
+        display: block;
+        width:16px;
+        height:16px;
+        top:50%;
+        left:0;
+        margin-top:-8px;
+        background: url("../../../img/public/common/star.png?base64");
       }
-      &.canClick{
-        cursor: pointer;
+      &>span{
+        margin-left:20px;
+        &:hover{
+          color:#428bca;
+        }
+        &.canClick{
+          cursor: pointer;
+        }
       }
-    }
-    &>input{
-      position: absolute;
-      right:0;
-      top:4px;
-      height:22px;
-      width:260px;
-      padding:3px 30px 3px 8px;
-      font-size:12px;
-      border-radius: 3px;
-      border:1px solid #ccc;
-      @include boxShadow(inset 0 1px 1px rgba(0,0,0,0.075));
-      @include transition(box-shadow 0.30s ease-in-out);
-      &:focus{
-        border:#87C6F9 1px solid;
-        box-shadow: 0 0 5px rgba(103, 166, 217, 1);
+      &>input{
+        position: absolute;
+        right:0;
+        top:4px;
+        height:22px;
+        width:260px;
+        padding:3px 30px 3px 8px;
+        font-size:12px;
+        border-radius: 3px;
+        border:1px solid #ccc;
+        @include boxShadow(inset 0 1px 1px rgba(0,0,0,0.075));
+        @include transition(box-shadow 0.30s ease-in-out);
+        &:focus{
+          border:#87C6F9 1px solid;
+          box-shadow: 0 0 5px rgba(103, 166, 217, 1);
+        }
       }
-    }
-    &>i.search{
-      position: absolute;
-      display: block;
-      width:16px;
-      height:16px;
-      right:7px;
-      top:10px;
-      background: url("../../../img/public/common/search.png?base64");
-      &:hover{
-        cursor: pointer;
+      &>i.search{
+        position: absolute;
+        display: block;
+        width:16px;
+        height:16px;
+        right:7px;
+        top:10px;
+        background: url("../../../img/public/common/search.png?base64");
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
   }
 
   &>div.wrap{
-    background-position: center top;
-    background-repeat: no-repeat;
+    //background-position: center top;
+    //background-repeat: no-repeat;
     position: relative;
     &.bgSize{
       -webkit-background-size: 100% auto;
@@ -81,7 +85,7 @@ body{
       -ms-background-size: 100% auto;
       background-size: 100% auto;
     }
-    &>div.title{
+    &>div.title>div{
       position: relative;
       width:1000px;
       height:250px;
@@ -219,13 +223,17 @@ body{
       border:1px solid #ddd;
       //@include boxShadow(0 0 10px rgba(0, 0, 0, 0.3) inset );
       //border-radius: 4px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      border-radius: 6px;
       @include boxShadow(0px 5px 12px rgba(0, 0, 0, 0.2));
       padding:12px 15px;
     }
 
     &>div.footer{
       margin-top:40px;
-      background-color: #f5f5f5;
+      //background-color: #f5f5f5;
       &>ul{
         display: block;
         width:882px;
@@ -492,11 +500,11 @@ body{
 /////////////////////////////////////////////760
 @media screen and (max-width:1000px) {
   body{
-    &>div.search{
+    &>div.search>div{
       width:750px;
     }
     &>div.wrap{
-      &>div.title{
+      &>div.title>div{
         width:750px;
         &>div.txt{
           opacity: 0.25;
@@ -544,11 +552,11 @@ body{
 
 @media screen and (max-width:749px) {
   body{
-    &>div.search{
+    &>div.search>div{
       width:650px;
     }
     &>div.wrap{
-      &>div.title{
+      &>div.title>div{
         width:650px;
       }
       &>div.menu{
@@ -591,7 +599,7 @@ body{
 
 @media screen and (max-width:649px) {
   body{
-    &>div.search{
+    &>div.search>div{
       width:470px;
       &>i.star,&>span.canClick{
         display: none;
@@ -601,7 +609,7 @@ body{
       }
     }
     &>div.wrap{
-      &>div.title{
+      &>div.title>div{
         width:470px;
         &>div.txt{
           opacity: 0.15;
@@ -634,7 +642,7 @@ body{
 
 @media screen and (max-width:479px) {
   body{
-    &>div.search{
+    &>div.search>div{
       width:404px;
       &>i.star,&>span.canClick{
         display: none;
@@ -647,7 +655,7 @@ body{
       }
     }
     &>div.wrap{
-      &>div.title{
+      &>div.title>div{
         width:404px;
         &>div.logo{
           left:-30px;
@@ -679,7 +687,7 @@ body{
 //////////////375
 @media screen and (max-width:413px) {
   body{
-    &>div.search{
+    &>div.search>div{
       width:365px;
       &>i.star,&>span.canClick{
         display: none;
@@ -692,7 +700,7 @@ body{
       }
     }
     &>div.wrap{
-      &>div.title{
+      &>div.title>div{
         width:365px;
         &>div.logo{
           left:-48px;
@@ -724,7 +732,7 @@ body{
 //////////////360
 @media screen and (max-width:374px) {
   body{
-    &>div.search{
+    &>div.search>div{
       width:350px;
       &>i.star,&>span.canClick{
         display: none;
@@ -737,7 +745,7 @@ body{
       }
     }
     &>div.wrap{
-      &>div.title{
+      &>div.title>div{
         width:350px;
         &>div.logo{
           left:-55px;
@@ -769,7 +777,7 @@ body{
 //////////////320
 @media screen and (max-width:359px) {
   body{
-    &>div.search{
+    &>div.search>div{
       width:310px;
       &>i.star,&>span.canClick{
         display: none;
@@ -783,7 +791,7 @@ body{
       }
     }
     &>div.wrap{
-      &>div.title{
+      &>div.title>div{
         width:310px;
         &>div.logo{
           left:-75px;
@@ -832,11 +840,11 @@ body{
 
 @media screen and (min-width:1280px){
   body{
-    &>div.search{
+    &>div.search>div{
       width:1180px;
     }
     &>div.wrap{
-      &>div.title{
+      &>div.title>div{
         width:1180px;
       }
       &>div.menu{
@@ -869,11 +877,11 @@ body{
 
 @media screen and (min-width:1366px){
   body{
-    &>div.search{
+    &>div.search>div{
       width:1260px;
     }
     &>div.wrap{
-      &>div.title{
+      &>div.title>div{
         width:1260px;
       }
       &>div.menu{
@@ -901,11 +909,11 @@ body{
 
 @media screen and (min-width:1440px){
   body{
-    &>div.search{
+    &>div.search>div{
       width:1340px;
     }
     &>div.wrap{
-      &>div.title{
+      &>div.title>div{
         width:1340px;
       }
       &>div.menu{

@@ -90,8 +90,8 @@ $(function () {
     var month = currDate.getMonth()+ 1,
         date = currDate.getDate(),
         weekObj = ['日', '一', '二', '三', '四', '五', '六'],
-        searchBtn = $("body>div.search>i.search");
-    $("body>div.search>span:eq(1)").text(currDate.getFullYear()+"年"+(month>9 ? month : "0"+month)+"月"+(date>9 ? date : "0"+date )+"日 星期"+weekObj[currDate.getDay()]);
+        searchBtn = $("body>div.search>div>i.search");
+    $("body>div.search>div>span:eq(1)").text(currDate.getFullYear()+"年"+(month>9 ? month : "0"+month)+"月"+(date>9 ? date : "0"+date )+"日 星期"+weekObj[currDate.getDay()]);
 
     //搜索
     $("#search-input").on("input",function(){
@@ -110,7 +110,7 @@ $(function () {
     });
 
     //添加收藏夹
-    $("body>div.search>span:eq(0)").click(function(){
+    $("body>div.search>div>span:eq(0)").click(function(){
         try {
             window.external.addFavorite(window.location, document.title);
         }
@@ -124,7 +124,7 @@ $(function () {
     });
 
     //设置为首页
-    $("body>div.search>span:eq(2)").click(function(){
+    $("body>div.search>div>span:eq(2)").click(function(){
         if (document.all){
             document.body.style.behavior='url(#default#homepage)';
             document.body.setHomePage(location.href);
@@ -220,9 +220,9 @@ $(function () {
     };
 
     //////////////////////////////////////////lazyload bg
-    $("body>div.wrap").css("background-image","url(img/public/common/bg.jpg)");
-    $("body>div.wrap>div.title>div.logo").css("background-image","url(img/public/common/title.png)");
-    $("body>div.wrap>div.title>div.txt").css("background-image","url(img/public/common/title-txt.png)");
+    //$("body>div.wrap").css("background-image","url(img/public/common/bg.jpg)");
+    $("body>div.wrap>div.title>div>div.logo").css("background-image","url(img/public/common/title.png)");
+    $("body>div.wrap>div.title>div>div.txt").css("background-image","url(img/public/common/title-txt.png)");
 
     //////////////////////////////////////////////css的修正
     if(isSupportCss3("background-size")){
