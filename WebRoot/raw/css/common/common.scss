@@ -76,43 +76,50 @@ body{
   }
 
   &>div.wrap{
-    //background-position: center top;
-    //background-repeat: no-repeat;
     position: relative;
-    &.bgSize{
-      -webkit-background-size: 100% auto;
-      -moz-background-size: 100% auto;
-      -ms-background-size: 100% auto;
-      background-size: 100% auto;
-    }
-    &>div.title>div{
-      position: relative;
-      width:1000px;
-      height:250px;
-      margin:0 auto;
-      &>div.logo{
-        position: absolute;
-        top:60px;
-        left:0;
-        width:452px;
-        height:94px;
-        color:#000;
-        text-align: right;
-        //background: url("../../../img/public/common/title.png");
-        &>span{
+    &>div.title{
+      background-color: #003d96;
+      background: -webkit-gradient(linear,0 0,0 100%,from(#003d96),to(#428bc0));
+      background: -moz-linear-gradient(#003d96, #428bc0);
+      background: -o-linear-gradient(#003d96, #428bc0);
+      background: linear-gradient(top center, #003d96, #428bc0);
+      filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=130) progid:DXImageTransform.Microsoft.gradient(startcolorstr='#003d96',endcolorstr='#428bc0',gradientType=0);
+      &>div{
+        //background: url("../../../img/public/common/bg.jpg") center top no-repeat;
+        position: relative;
+        width:1000px;
+        height:250px;
+        margin:0 auto;
+        &>div.logo{
           position: absolute;
-          right:7px;
-          bottom:9px;
-          letter-spacing: 1px;
+          top:60px;
+          left:0;
+          width:452px;
+          height:94px;
+          color:#000;
+          text-align: right;
+          //background: url("../../../img/public/common/title.png");
+          &>span{
+            position: absolute;
+            right:7px;
+            bottom:9px;
+            letter-spacing: 1px;
+          }
         }
-      }
-      &>div.txt{
-        position: absolute;
-        top:60px;
-        right:0;
-        width:389px;
-        height:136px;
-        //background: url("../../../img/public/common/title-txt.png");
+        &>div.txt{
+          position: absolute;
+          top:60px;
+          right:0;
+          width:389px;
+          height:136px;
+          //background: url("../../../img/public/common/title-txt.png");
+        }
+        /*&.bgSize{
+          -webkit-background-size: 100% 100%;
+          -moz-background-size: 100% 100%;
+          -ms-background-size: 100% 100%;
+          background-size: 100% 100%;
+        }*/
       }
     }
 

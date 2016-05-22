@@ -16,6 +16,7 @@
   "public/subject.js": "public/subject.js?v=b1507e28b5",
   "tools/chart/bar.js": "tools/chart/bar.js?v=e202d6821d",
   "tools/chart/line.js": "tools/chart/line.js?v=74022c4279",
+  "tools/css3-mediaqueries.js": "tools/css3-mediaqueries.js?v=1f1ad7e9ba",
   "tools/echarts.js": "tools/echarts.js?v=253e461091",
   "tools/idangerous.swiper.min.js": "tools/idangerous.swiper.min.js?v=52fa42e547",
   "tools/jquery.min.js": "tools/jquery.min.js?v=679bdc8d5f"

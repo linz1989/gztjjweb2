@@ -21,57 +21,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="common.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/raw/css/common/common.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="218" column="18" selection-start-line="218" selection-start-column="18" selection-end-line="218" selection-end-column="18" />
+            <state relative-caret-position="248">
+              <caret line="925" column="17" selection-start-line="925" selection-start-column="17" selection-end-line="925" selection-end-column="17" />
               <folding>
                 <element signature="e#461#692#0" expanded="false" />
                 <element signature="e#705#849#0" expanded="false" />
                 <element signature="e#863#1332#0" expanded="false" />
                 <element signature="e#1349#1615#0" expanded="false" />
-                <element signature="e#1752#1912#0" expanded="false" />
-                <element signature="e#2037#2394#0" expanded="false" />
-                <element signature="e#2618#5047#0" expanded="false" />
-                <element signature="e#2780#2877#0" expanded="false" />
-                <element signature="e#3117#3316#0" expanded="false" />
-                <element signature="e#3908#3950#0" expanded="false" />
-                <element signature="e#3972#4014#0" expanded="false" />
-                <element signature="e#4036#4078#0" expanded="false" />
-                <element signature="e#4102#4181#0" expanded="false" />
-                <element signature="e#4863#4907#0" expanded="false" />
-                <element signature="e#5675#5784#0" expanded="false" />
-                <element signature="e#5797#7941#0" expanded="false" />
-                <element signature="e#6047#6202#0" expanded="false" />
-                <element signature="e#6216#6991#0" expanded="false" />
-                <element signature="e#6510#6594#0" expanded="false" />
-                <element signature="e#6615#6911#0" expanded="false" />
-                <element signature="e#7961#8077#0" expanded="false" />
-                <element signature="e#8096#8290#0" expanded="false" />
-                <element signature="e#8614#9157#0" expanded="false" />
-                <element signature="e#9167#9264#0" expanded="false" />
-                <element signature="e#9277#9474#0" expanded="false" />
-                <element signature="e#9489#9852#0" expanded="false" />
-                <element signature="e#9868#9955#0" expanded="false" />
-                <element signature="e#9967#10406#0" expanded="false" />
-                <element signature="e#10419#10573#0" expanded="false" />
-                <element signature="e#10584#10716#0" expanded="false" />
-                <element signature="e#10730#10915#0" expanded="false" />
-                <element signature="e#10935#10989#0" expanded="false" />
-                <element signature="e#11009#11448#0" expanded="false" />
-                <element signature="e#11538#12489#0" expanded="false" />
-                <element signature="e#12535#13316#0" expanded="false" />
-                <element signature="e#12557#12583#0" expanded="false" />
-                <element signature="e#12598#13267#0" expanded="false" />
-                <element signature="e#13356#14029#0" expanded="false" />
-                <element signature="e#14067#14806#0" expanded="false" />
-                <element signature="e#14870#15599#0" expanded="false" />
-                <element signature="e#15665#16394#0" expanded="false" />
-                <element signature="e#16460#17600#0" expanded="false" />
-                <element signature="e#17648#18214#0" expanded="false" />
-                <element signature="e#18262#18691#0" expanded="false" />
-                <element signature="e#18739#19126#0" expanded="false" />
+                <element signature="e#2389#2776#0" expanded="false" />
+                <element signature="e#2794#2994#0" expanded="false" />
+                <element signature="e#3225#5654#0" expanded="false" />
+                <element signature="e#3387#3484#0" expanded="false" />
+                <element signature="e#3724#3923#0" expanded="false" />
+                <element signature="e#4515#4557#0" expanded="false" />
+                <element signature="e#4579#4621#0" expanded="false" />
+                <element signature="e#4643#4685#0" expanded="false" />
+                <element signature="e#4709#4788#0" expanded="false" />
+                <element signature="e#5470#5514#0" expanded="false" />
+                <element signature="e#6282#6391#0" expanded="false" />
+                <element signature="e#6404#8548#0" expanded="false" />
+                <element signature="e#6654#6809#0" expanded="false" />
+                <element signature="e#6823#7598#0" expanded="false" />
+                <element signature="e#7117#7201#0" expanded="false" />
+                <element signature="e#7222#7518#0" expanded="false" />
+                <element signature="e#8568#8684#0" expanded="false" />
+                <element signature="e#8703#8897#0" expanded="false" />
+                <element signature="e#9221#9764#0" expanded="false" />
+                <element signature="e#9774#9871#0" expanded="false" />
+                <element signature="e#9884#10081#0" expanded="false" />
+                <element signature="e#10096#10459#0" expanded="false" />
+                <element signature="e#10475#10562#0" expanded="false" />
+                <element signature="e#10574#11013#0" expanded="false" />
+                <element signature="e#11026#11180#0" expanded="false" />
+                <element signature="e#11191#11323#0" expanded="false" />
+                <element signature="e#11337#11522#0" expanded="false" />
+                <element signature="e#11542#11596#0" expanded="false" />
+                <element signature="e#11616#12055#0" expanded="false" />
+                <element signature="e#12145#13096#0" expanded="false" />
+                <element signature="e#13142#13923#0" expanded="false" />
+                <element signature="e#13164#13190#0" expanded="false" />
+                <element signature="e#13205#13874#0" expanded="false" />
+                <element signature="e#13963#14636#0" expanded="false" />
+                <element signature="e#14674#15413#0" expanded="false" />
+                <element signature="e#15477#16206#0" expanded="false" />
+                <element signature="e#16272#17001#0" expanded="false" />
+                <element signature="e#17067#18207#0" expanded="false" />
+                <element signature="e#18255#18821#0" expanded="false" />
+                <element signature="e#18869#19298#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2100">
+              <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+              <folding>
+                <element signature="e#4480#4818#0" expanded="false" />
+                <element signature="e#5301#6218#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -90,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/countyEconomicIndexDetail.html" />
         <option value="$PROJECT_DIR$/dishonestInfo.html" />
         <option value="$PROJECT_DIR$/economicNews.html" />
         <option value="$PROJECT_DIR$/organization.html" />
@@ -122,6 +133,9 @@
         <option value="$PROJECT_DIR$/raw/css/public/index.scss" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/raw/css/common/reset.scss" />
+        <option value="$PROJECT_DIR$/raw/js/public/common.js" />
+        <option value="$PROJECT_DIR$/raw/html/public/index.html" />
+        <option value="$PROJECT_DIR$/article.html" />
         <option value="$PROJECT_DIR$/raw/html/public/article.html" />
         <option value="$PROJECT_DIR$/raw/html/public/censusSubject.html" />
         <option value="$PROJECT_DIR$/raw/html/public/cityEconomicIndexDetail.html" />
@@ -129,7 +143,6 @@
         <option value="$PROJECT_DIR$/raw/html/public/countyEconomicIndexDetail.html" />
         <option value="$PROJECT_DIR$/raw/html/public/dishonestInfo.html" />
         <option value="$PROJECT_DIR$/raw/html/public/economicNews.html" />
-        <option value="$PROJECT_DIR$/raw/html/public/index.html" />
         <option value="$PROJECT_DIR$/raw/html/public/organization.html" />
         <option value="$PROJECT_DIR$/raw/html/public/search.html" />
         <option value="$PROJECT_DIR$/raw/html/public/statisticsAnalysis.html" />
@@ -139,7 +152,6 @@
         <option value="$PROJECT_DIR$/raw/html/public/statisticsKnowledge.html" />
         <option value="$PROJECT_DIR$/raw/html/public/statisticsService.html" />
         <option value="$PROJECT_DIR$/raw/html/public/subject.html" />
-        <option value="$PROJECT_DIR$/raw/js/public/common.js" />
         <option value="$PROJECT_DIR$/raw/css/common/common.scss" />
       </list>
     </option>
@@ -220,6 +232,10 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -240,6 +256,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GztjjWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebRoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="raw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,19 +377,19 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/raw/html/public" />
-      <recent name="$PROJECT_DIR$/raw/js/tools" />
-      <recent name="$PROJECT_DIR$/compressed/js/tools" />
-      <recent name="$PROJECT_DIR$/raw/css/common" />
-      <recent name="$PROJECT_DIR$/compressed/js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/raw/js/tools" />
       <recent name="D:\apache-tomcat-7.0.54\webapps\GztjjWeb\raw\html\admin" />
       <recent name="D:\apache-tomcat-7.0.54\webapps\GztjjWeb\raw\html\public" />
       <recent name="D:\apache-tomcat-7.0.54\webapps\GztjjWeb\raw\js\tools" />
       <recent name="D:\apache-tomcat-7.0.54\webapps\GztjjWeb\raw\js\page" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/raw/js/tools" />
+      <recent name="$PROJECT_DIR$/raw/html/public" />
+      <recent name="$PROJECT_DIR$/compressed/js/tools" />
+      <recent name="$PROJECT_DIR$/raw/css/common" />
+      <recent name="$PROJECT_DIR$/compressed/js" />
     </key>
   </component>
   <component name="RunManager">
@@ -474,19 +508,19 @@
       <workItem from="1463305847300" duration="6044000" />
       <workItem from="1463823716737" duration="2409000" />
       <workItem from="1463877995080" duration="6978000" />
-      <workItem from="1463887295387" duration="26000" />
+      <workItem from="1463887295387" duration="5919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283521000" />
+    <option name="totallyTimeSpent" value="289414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20406568" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22283034" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23692308" sideWeight="0.5027365" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -523,20 +557,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/raw/js/dist/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="524" column="8" selection-start-line="524" selection-start-column="8" selection-end-line="524" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statisticsData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/compressed/js/tools/echarts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -548,6 +568,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="0" column="8215" selection-start-line="0" selection-start-column="8215" selection-end-line="0" selection-end-column="8215" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -722,132 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1307">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="29" column="10" selection-start-line="27" selection-start-column="4" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/censusSubject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/cityEconomicIndexDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/consult.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/countyEconomicIndexDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/dishonestInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/economicNews.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/organization.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsAnalysis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsBuild.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsBusiness.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsKnowledge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsService.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw/html/public/subject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/raw/css/public/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4626">
@@ -864,61 +759,230 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/raw/js/public/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+        <state relative-caret-position="175">
+          <caret line="222" column="6" selection-start-line="222" selection-start-column="6" selection-end-line="222" selection-end-column="6" />
+          <folding>
+            <element signature="e#2420#2597#0" expanded="false" />
+            <element signature="e#3634#3946#0" expanded="false" />
+            <element signature="e#4018#4743#0" expanded="false" />
+            <element signature="e#4941#5260#0" expanded="false" />
+            <element signature="e#5293#5383#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/js/tools/css3-mediaqueries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/censusSubject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/cityEconomicIndexDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/consult.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/countyEconomicIndexDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/dishonestInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/economicNews.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/organization.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsAnalysis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsBuild.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsBusiness.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsData.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsKnowledge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/statisticsService.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/subject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw/html/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/raw/css/common/common.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="218" column="18" selection-start-line="218" selection-start-column="18" selection-end-line="218" selection-end-column="18" />
+        <state relative-caret-position="248">
+          <caret line="925" column="17" selection-start-line="925" selection-start-column="17" selection-end-line="925" selection-end-column="17" />
           <folding>
             <element signature="e#461#692#0" expanded="false" />
             <element signature="e#705#849#0" expanded="false" />
             <element signature="e#863#1332#0" expanded="false" />
             <element signature="e#1349#1615#0" expanded="false" />
-            <element signature="e#1752#1912#0" expanded="false" />
-            <element signature="e#2037#2394#0" expanded="false" />
-            <element signature="e#2618#5047#0" expanded="false" />
-            <element signature="e#2780#2877#0" expanded="false" />
-            <element signature="e#3117#3316#0" expanded="false" />
-            <element signature="e#3908#3950#0" expanded="false" />
-            <element signature="e#3972#4014#0" expanded="false" />
-            <element signature="e#4036#4078#0" expanded="false" />
-            <element signature="e#4102#4181#0" expanded="false" />
-            <element signature="e#4863#4907#0" expanded="false" />
-            <element signature="e#5675#5784#0" expanded="false" />
-            <element signature="e#5797#7941#0" expanded="false" />
-            <element signature="e#6047#6202#0" expanded="false" />
-            <element signature="e#6216#6991#0" expanded="false" />
-            <element signature="e#6510#6594#0" expanded="false" />
-            <element signature="e#6615#6911#0" expanded="false" />
-            <element signature="e#7961#8077#0" expanded="false" />
-            <element signature="e#8096#8290#0" expanded="false" />
-            <element signature="e#8614#9157#0" expanded="false" />
-            <element signature="e#9167#9264#0" expanded="false" />
-            <element signature="e#9277#9474#0" expanded="false" />
-            <element signature="e#9489#9852#0" expanded="false" />
-            <element signature="e#9868#9955#0" expanded="false" />
-            <element signature="e#9967#10406#0" expanded="false" />
-            <element signature="e#10419#10573#0" expanded="false" />
-            <element signature="e#10584#10716#0" expanded="false" />
-            <element signature="e#10730#10915#0" expanded="false" />
-            <element signature="e#10935#10989#0" expanded="false" />
-            <element signature="e#11009#11448#0" expanded="false" />
-            <element signature="e#11538#12489#0" expanded="false" />
-            <element signature="e#12535#13316#0" expanded="false" />
-            <element signature="e#12557#12583#0" expanded="false" />
-            <element signature="e#12598#13267#0" expanded="false" />
-            <element signature="e#13356#14029#0" expanded="false" />
-            <element signature="e#14067#14806#0" expanded="false" />
-            <element signature="e#14870#15599#0" expanded="false" />
-            <element signature="e#15665#16394#0" expanded="false" />
-            <element signature="e#16460#17600#0" expanded="false" />
-            <element signature="e#17648#18214#0" expanded="false" />
-            <element signature="e#18262#18691#0" expanded="false" />
-            <element signature="e#18739#19126#0" expanded="false" />
+            <element signature="e#2389#2776#0" expanded="false" />
+            <element signature="e#2794#2994#0" expanded="false" />
+            <element signature="e#3225#5654#0" expanded="false" />
+            <element signature="e#3387#3484#0" expanded="false" />
+            <element signature="e#3724#3923#0" expanded="false" />
+            <element signature="e#4515#4557#0" expanded="false" />
+            <element signature="e#4579#4621#0" expanded="false" />
+            <element signature="e#4643#4685#0" expanded="false" />
+            <element signature="e#4709#4788#0" expanded="false" />
+            <element signature="e#5470#5514#0" expanded="false" />
+            <element signature="e#6282#6391#0" expanded="false" />
+            <element signature="e#6404#8548#0" expanded="false" />
+            <element signature="e#6654#6809#0" expanded="false" />
+            <element signature="e#6823#7598#0" expanded="false" />
+            <element signature="e#7117#7201#0" expanded="false" />
+            <element signature="e#7222#7518#0" expanded="false" />
+            <element signature="e#8568#8684#0" expanded="false" />
+            <element signature="e#8703#8897#0" expanded="false" />
+            <element signature="e#9221#9764#0" expanded="false" />
+            <element signature="e#9774#9871#0" expanded="false" />
+            <element signature="e#9884#10081#0" expanded="false" />
+            <element signature="e#10096#10459#0" expanded="false" />
+            <element signature="e#10475#10562#0" expanded="false" />
+            <element signature="e#10574#11013#0" expanded="false" />
+            <element signature="e#11026#11180#0" expanded="false" />
+            <element signature="e#11191#11323#0" expanded="false" />
+            <element signature="e#11337#11522#0" expanded="false" />
+            <element signature="e#11542#11596#0" expanded="false" />
+            <element signature="e#11616#12055#0" expanded="false" />
+            <element signature="e#12145#13096#0" expanded="false" />
+            <element signature="e#13142#13923#0" expanded="false" />
+            <element signature="e#13164#13190#0" expanded="false" />
+            <element signature="e#13205#13874#0" expanded="false" />
+            <element signature="e#13963#14636#0" expanded="false" />
+            <element signature="e#14674#15413#0" expanded="false" />
+            <element signature="e#15477#16206#0" expanded="false" />
+            <element signature="e#16272#17001#0" expanded="false" />
+            <element signature="e#17067#18207#0" expanded="false" />
+            <element signature="e#18255#18821#0" expanded="false" />
+            <element signature="e#18869#19298#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2100">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+          <folding>
+            <element signature="e#4480#4818#0" expanded="false" />
+            <element signature="e#5301#6218#0" expanded="false" />
           </folding>
         </state>
       </provider>
